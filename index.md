@@ -1,5 +1,5 @@
 ## James Taylor's Homepage     |      Positronics Lab @ GWU
-![James](http://positronicslab.github.io/assets/img/jrt.png)
+![James](images/jrt_small.png)
 
 ## Publications 
 
