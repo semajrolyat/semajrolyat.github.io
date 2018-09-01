@@ -2,7 +2,7 @@
 ![James](images/jrt_small.png)
 
 ## Dissertation
-James R. Taylor, "Toward Consistent Robotics Simulation Through Validation", The George Washington University, 2018, [<a href="/assets/pdfs/jrt-dissertation-2018.pdf">jrt-dissertation-2018.pdf</a>]
+James R. Taylor, "Toward Consistent Robotics Simulation Through Validation", The George Washington University, July 23, 2018, [<a href="/assets/pdfs/jrt-dissertation-2018.pdf">jrt-dissertation-2018.pdf</a>]
 
 ## Publications 
 
