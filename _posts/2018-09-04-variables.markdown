@@ -3,9 +3,8 @@ layout: post
 title:  "Variables"
 date:   2018-08-30 00:00:00 -0400
 schedule:   2018-08-30 00:00:00 -0400
-categories: Coursework
+categories: cs1012
 organization: "GWU"
-course: cs1012
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">

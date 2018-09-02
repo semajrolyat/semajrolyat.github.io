@@ -3,10 +3,9 @@ layout: post
 title:  "Introduction"
 date:   2018-08-28 00:00:00 -0400
 schedule:   2018-08-28 00:00:00 -0400
-categories: Coursework
+categories: cs1012
 reading: "2.4-2.7"
 organization: "GWU"
-course: cs1012
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
