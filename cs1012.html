@@ -15,7 +15,7 @@ layout: default
       {%- for post in site.categories.CS1012 -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
         <tr>
-          <td>{{ post.date | date: date_format }}</td>
+          <td>{{ post.schedule | date: date_format }}</td>
           <td>
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
