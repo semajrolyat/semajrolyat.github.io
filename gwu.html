@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="GWU">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+    <h2 class="gwu-list-heading">{{ page.list_title | default: "GWU" }}</h2>
+    {{%- assign cs1012_url = "cs1012.html" -%}}
+    <a class="page-link" href="{{ cs1012_url | relative_url }}">CS 1012</a>
+</div>
+
