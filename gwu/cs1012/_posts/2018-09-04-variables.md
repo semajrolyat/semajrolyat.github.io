@@ -2,7 +2,7 @@
 layout: post
 title:  "Variables"
 date:   2018-08-28 00:00:00 -0400
-schedule:   2018-08-30 00:00:00 -0400
+schedule:   2018-09-04 00:00:00 -0400
 categories: [GWU, CS1012]
 ---
 <head>

@@ -12,7 +12,7 @@ layout: default
       <th>Date</th>
       <th>Content</th>
       <th>Reading</th>
-      {%- for post in site.categories.CS1012 -%}
+      {%- for post in site.gwfilter.CS1012 -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
         <tr>
           <td>{{ post.schedule | date: date_format }}</td>

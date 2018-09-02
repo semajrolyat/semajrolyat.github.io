@@ -3,7 +3,8 @@ layout: post
 title:  "Introduction"
 date:   2018-08-28 00:00:00 -0400
 schedule:   2018-08-28 00:00:00 -0400
-categories: [GWU, CS1012]
+categories: [GWU]
+gwfilter: [CS1012]
 reading: "2.4-2.7"
 ---
 <head>
