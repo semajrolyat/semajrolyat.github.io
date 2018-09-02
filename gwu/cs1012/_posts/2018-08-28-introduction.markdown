@@ -128,7 +128,7 @@ Suppose we wish to draw a square.  We can do so using the following set of state
 
 The turtle will draw a square similar to the following image:
 
-![Example 1 Square]({{ "/assets/gwu/cs1012/1/example1.png" | absolute_url }})
+![Example 1 Square]({{ "/assets/introduction/example1.png" }})
 
 ### Exercise 1 - Center the Square
 The square in Example 1 is not centered in the middle of the canvas.  Using the statements described above, how can you draw the same square centered in the canvas?  The turtle should end up in the same corner of the square as in Example 1.
