@@ -129,6 +129,7 @@ Suppose we wish to draw a square.  We can do so using the following set of state
 {% endhighlight %}
 
 The turtle will draw a square similar to the following image:
+
 ![Example 1 Square]({{ "/assets/gwu/cs1012/1/example1.png" | absolute_url }})
 
 ### Exercise 1 - Center the Square
@@ -149,6 +150,7 @@ We can use the following python code to draw a circle from the turtle's starting
 Note that number supplied to the circle is half the diameter which is by definition the radius of the circle.
 
 The turtle will draw a circle similar to the following image:
+
 ![Example 2 Circle]({{ "/assets/gwu/cs1012/1/example2.png" | absolute_url }})
 
 ### Exercise 2 - Circumscribe a Centered Diamond
@@ -157,6 +159,7 @@ In this exercise, you will draw a diamond that has a circle drawn around it.  Th
 Recall that the pythagorean theorem is a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 
 Draw the circumscribed diamond.  The result should look like the following image:
+
 ![Exercise 2 Diamond]({{ "/assets/gwu/cs1012/1/exercise2.png" | absolute_url }})
 
 ### Example 3 - Running a Python Script
