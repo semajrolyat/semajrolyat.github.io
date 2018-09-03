@@ -3,7 +3,8 @@ layout: post
 title:  "Introduction"
 date:   2018-08-28 00:00:00 -0400
 schedule:   2018-08-28 00:00:00 -0400
-categories: [GWU,classwork]
+categories: [GWU]
+docclass: "classwork"
 gwclass: "cs1012"
 reading: "2.4-2.7"
 ---

@@ -14,7 +14,7 @@ layout: default
     <th>Reading</th>
     <th>Notes</th>
     {%- for post in site.categories.GWU -%}
-      {%- if post.gwclass == "cs1012" -%}
+      {%- if post.gwclass == "cs1012" and post.docclass == "classwork" -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
         <tr>
           <td>{{ post.schedule | date: date_format }}</td>
@@ -25,9 +25,11 @@ layout: default
           </td>
           <td>{{ post.reading }}</td>
           <td>
+            {%- if post.notes -%}
             <a class="note-link" href="{{ post.notes | relative_url }}">
               Notes
             </a>
+            {%- endif -%}
           </td>
         </tr>
       {%- endif -%}
