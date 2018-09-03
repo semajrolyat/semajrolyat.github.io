@@ -7,14 +7,14 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012" }}</h2>
+  <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012 - Introduction to Programming with Python - Fall 2018" }}</h2>
   <table>
     <th>Date</th>
-    <th>Classwork</th>
+    <th>Discussion</th>
     <th>Reading</th>
-    <th>Notes</th>
+    <th>Exercises</th>
     {%- for post in site.categories.GWU -%}
-      {%- if post.gwclass == "cs1012" and post.docclass == "classwork" -%}
+      {%- if post.gwclass == "cs1012" and post.docclass == "discussion" -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
         <tr>
           <td>{{ post.schedule | date: date_format }}</td>
@@ -25,9 +25,9 @@ layout: default
           </td>
           <td>{{ post.reading }}</td>
           <td>
-            {%- if post.notes -%}
-            <a class="note-link" href="{{ post.notes | relative_url }}">
-              Notes
+            {%- if post.exercises -%}
+            <a class="exercise-link" href="{{ post.exercises | relative_url }}">
+              Exercises
             </a>
             {%- endif -%}
           </td>
@@ -36,4 +36,3 @@ layout: default
     {%- endfor -%}
   </table>
 </div>
-
