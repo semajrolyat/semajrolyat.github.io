@@ -4,7 +4,7 @@ title:  "Variables"
 date:   2018-08-28 00:00:00 -0400
 schedule:   2018-09-04 00:00:00 -0400
 categories: [GWU]
-gwfilter: CS1012
+gwfilter: "CS1012"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
