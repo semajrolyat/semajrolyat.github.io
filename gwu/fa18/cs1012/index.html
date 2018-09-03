@@ -10,8 +10,9 @@ layout: default
   <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012" }}</h2>
   <table>
     <th>Date</th>
-    <th>Content</th>
+    <th>Classwork</th>
     <th>Reading</th>
+    <th>Notes</th>
     {%- for post in site.categories.GWU -%}
       {%- if post.gwclass == "cs1012" -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
@@ -23,6 +24,7 @@ layout: default
             </a>
           </td>
           <td>{{ post.reading }}</td>
+          <td></td>
         </tr>
       {%- endif -%}
     {%- endfor -%}
