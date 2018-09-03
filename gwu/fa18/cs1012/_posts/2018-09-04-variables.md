@@ -3,8 +3,9 @@ layout: post
 title:  "Variables"
 date:   2018-08-28 00:00:00 -0400
 schedule:   2018-09-04 00:00:00 -0400
-categories: [GWU,lecture]
+categories: [GWU,classwork]
 gwclass: "cs1012"
+notes: "/gwu/fa18/cs1012/2018/08/28/notes.html"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">

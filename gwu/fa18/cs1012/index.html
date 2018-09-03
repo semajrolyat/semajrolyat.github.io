@@ -24,7 +24,11 @@ layout: default
             </a>
           </td>
           <td>{{ post.reading }}</td>
-          <td></td>
+          <td>
+            <a class="note-link" href="{{ post.notes | relative_url }}">
+              Notes
+            </a>
+          </td>
         </tr>
       {%- endif -%}
     {%- endfor -%}
