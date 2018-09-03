@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Variables and Expressions"
-date:   2018-08-28 00:00:00 -0400
+date:   2018-09-04 00:00:00 -0400
 schedule:   2018-09-04 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
@@ -21,11 +21,11 @@ As indicated in the previous class, it is beneficial to write a Python program i
 ```
 This will open a window that looks like this:
 
-![IDLE Shell]({{ "/gwu/fa18/cs1012/assets/09-04-2018/idle-shell.png" | absolute_url }})
+![IDLE Shell]({{ "/gwu/fa18/cs1012/assets/09_04_2018/idle-shell.png" | absolute_url }})
 
 This window functions the same as the python interactive shell except it is inside a window that includes a menu at the top.  On the menu, the ```File | New File``` option will open a new editor window in which you can write a script.
 
-![IDLE File]({{ "/gwu/fa18/cs1012/assets/09-04-2018/idle-file.png" | absolute_url }})
+![IDLE File]({{ "/gwu/fa18/cs1012/assets/09_04_2018/idle-file.png" | absolute_url }})
 
 You can run the script from the editor's ```Run | Run Module``` menu option; however, you must save the script first using the editor's ```File``` menu.
 
@@ -36,7 +36,7 @@ The prototypical first program in most languages is to print "Hello World!" to t
 ```python
 print("Hello World!")
 ```
-![IDLE Hello]({{ "/gwu/fa18/cs1012/assets/09-04-2018/idle-hello.png" | absolute_url }})
+![IDLE Hello]({{ "/gwu/fa18/cs1012/assets/09_04_2018/idle-hello.png" | absolute_url }})
 
 ## Introduction
 > Much of what we discuss today will be placed in the context of mathematics.  If we only use mathematics then our programs will be nothing more than glorified calculators; however, we are focuing on mathematics now because it is hopefully a context that we all share.  We will expand beyond mathematical concepts very soon.
