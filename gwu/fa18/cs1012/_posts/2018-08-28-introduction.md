@@ -3,8 +3,8 @@ layout: post
 title:  "Introduction"
 date:   2018-08-28 00:00:00 -0400
 schedule:   2018-08-28 00:00:00 -0400
-categories: [GWU]
-gwfilter: "CS1012"
+categories: [GWU,lecture]
+gwclass: "cs1012"
 reading: "2.4-2.7"
 ---
 <head>
@@ -129,14 +129,14 @@ Suppose we wish to draw a square.  We can do so using the following set of state
 
 The turtle will draw a square similar to the following image:
 
-![Example 1 Square]({{ "/gwu/cs1012/assets/introduction/example1.png" | absolute_url }})
+![Example 1 Square]({{ "/gwu/fa18/cs1012/assets/introduction/example1.png" | absolute_url }})
 
 ### Exercise 1 - Center the Square
 The square in Example 1 is not centered in the middle of the canvas.  Using the statements described above, how can you draw the same square centered in the canvas?  The turtle should end up in the same corner of the square as in Example 1.
 
 Draw the square.  The result should look like the following image:
 
-![Exercise 1 Square]({{ "/gwu/cs1012/assets/introduction/exercise1.png" | absolute_url }})
+![Exercise 1 Square]({{ "/gwu/fa18/cs1012/assets/introduction/exercise1.png" | absolute_url }})
 
 ### Example 2 - Drawing a Circle
 While is is possible to draw a circle using a sequence of primitive moving and turning statements, such a program would be cumbersome to write.  Fortunately, there is a built in `circle` that we can use to control the turtle.
@@ -150,7 +150,7 @@ Note that number supplied to the circle is half the diameter which is by definit
 
 The turtle will draw a circle similar to the following image:
 
-![Example 2 Circle]({{ "/gwu/cs1012/assets/introduction/example2.png" | absolute_url }})
+![Example 2 Circle]({{ "/gwu/fa18/cs1012/assets/introduction/example2.png" | absolute_url }})
 
 ### Exercise 2 - Circumscribe a Centered Diamond
 In this exercise, you will draw a diamond that has a circle drawn around it.  The diamond should be centered in the canvas and should have the same dimensions as the square in Exercise 1.  This diamond is simply a square rotated by 45 degrees.  The turtle should end up at the bottom-most point of the diamond and rotated toward the right hand side of the canvas.
@@ -159,7 +159,7 @@ Recall that the pythagorean theorem is a<sup>2</sup> + b<sup>2</sup> = c<sup>2</
 
 Draw the circumscribed diamond.  The result should look like the following image:
 
-![Exercise 2 Diamond]({{ "/gwu/cs1012/assets/introduction/exercise2.png" | absolute_url }})
+![Exercise 2 Diamond]({{ "/gwu/fa18/cs1012/assets/introduction/exercise2.png" | absolute_url }})
 
 ### Example 3 - Running a Python Script
 While we can accomplish a lot using the interactive python prompt, writing a program entirely at the prompt poses a number of problems:
@@ -199,7 +199,7 @@ done()
 ### Exercise 3 - Draw a House
 In this exercise, write a python script to draw a house.  You do not have to draw the house exactly as illustrated in the image below; however, it should have the same general characteristics: a pitched roof, a centered door and a window on either side of the door.  The turtle can end up anywhere you choose.
 
-![Exercise 3 House]({{ "/gwu/cs1012/assets/introduction/exercise3.png" | absolute_url }})
+![Exercise 3 House]({{ "/gwu/fa18/cs1012/assets/introduction/exercise3.png" | absolute_url }})
 
 ## Reflection
 Drawing with a Turtle program may appear to be overly simple; however, the simplicity of today's work masks some very important concepts.
