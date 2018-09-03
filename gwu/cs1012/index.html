@@ -7,12 +7,13 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-    <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012" }}</h2>
-    <table>
-      <th>Date</th>
-      <th>Content</th>
-      <th>Reading</th>
-      {%- for post in site.gwfilter.CS1012 -%}
+  <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012" }}</h2>
+  <table>
+    <th>Date</th>
+    <th>Content</th>
+    <th>Reading</th>
+    {%- for post in site.categories.GWU -%}
+      {%- if post.gwfilter == CS1012 -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
         <tr>
           <td>{{ post.schedule | date: date_format }}</td>
@@ -23,8 +24,8 @@ layout: default
           </td>
           <td>{{ post.reading }}</td>
         </tr>
-      {%- endfor -%}
-    </table>
-
+      {%- endif -%}
+    {%- endfor -%}
+  </table>
 </div>
 
