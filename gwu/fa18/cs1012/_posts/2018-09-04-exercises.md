@@ -36,9 +36,27 @@ print("Hello World!")
 ```
 ![IDLE Hello]({{ "/gwu/fa18/cs1012/assets/09_04_2018/idle-hello.png" | absolute_url }})
 
-## Exercise 1
-Write a "Hello World" script using IDLE.  Save this script as ```hello.py```.  Run the script.  Take a screenshot of the output from ```hello.py``` in IDLE shell and save the screenshot as ```hello.png```.
+## Computing a Square Root
+So far, we have been importing turtle commands using the following statement:
+```python
+from turtle import *
+```
+You were required to calculate the square root by hand in order to use the pythogorean theorum in the previous set of exercises.  Of course a computer is capable of computing a square root and we can gain access to the square root command using the same approach that allowed access to the turtle commands.  If you add the following line at the beginning of a Python script, you can use the built in square root command:
+```python
+from math import *
+```
+If you have the above line at the beginning of your script, you can compute a square root using the following command:
+```python
+a = 9
+b = sqrt(a)
+```
+> We have not discussed the concept of a function yet and I have avoided the term so far; however, the turtle "commands", the print "command", and the sqrt "command" are all functions.  We will discuss functions more in depth in a future class.
 
-## Exercise 2
+# Exercises
+Each exercise describes exactly what you must submit.  **DO NOT** submit individual files.  Save everything described into one folder, zip that folder, and submit the zip containing all files.
 
-## Exercise 3
+## Exercise 1 - Hello World!
+Write a "Hello World" script using IDLE.  Save this script as ```hello.py```.  Run the script.  Take a screenshot of the output from ```hello.py``` in IDLE shell and save the screenshot as ```hello.png```.  Submit both ```hello.py``` and ```hello.png```.
+
+## Exercise 2 - Turtle with Variables
+Write a script that implements the circumscribed diamond from the introductory [Exercise 2]({{ "/gwu/fa18/cs1012/2018/08/28/exercises.html" | absolute_url }}) again using the variable ```r``` for the radius of the circle.  Use the ```sqrt``` function to compute the length of a side of the diamond based on the value assigned to ```r```.  Save the script as ```cdiamond.py``` and run the script.  Save a screen shot of the diamond as ```cdiamond.png```.  Submit both ```cdiamond.py``` and ```cdiamond.png```.
