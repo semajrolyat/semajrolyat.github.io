@@ -119,6 +119,8 @@ Each operator has a precedence which is the same as that used in mathematics.
 So far, we have issued Python Turtle commands using fixed numbers.  For example, the following Python script draws a square 100 units on a side:
 ```python
 from turtle import *
+
+# Draw a square with sides equal to 100 units
 forward(100)
 left(90)
 forward(100)
@@ -138,7 +140,10 @@ Instead of hardcoding 100 as the length of a side, we can use a variable instead
 
 ```python
 from turtle import *
+# Length of a side
 x = 100
+
+# Draw a square with sides equal to x units
 forward(x)
 left(90)
 forward(x)
@@ -155,13 +160,18 @@ Recall that we also created a centered square.  The following set of commands al
 
 ```python
 from turtle import *
+# Length of a side
 x=100
+
+# Center the square
 penup()
 right(90)
 forward(x / 2)
 left(90)
 backward(x / 2)
 pendown()
+
+# Draw a square with sides equal to x units
 forward(x)
 left(90)
 forward(x)
