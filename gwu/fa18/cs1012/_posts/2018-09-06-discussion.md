@@ -31,11 +31,15 @@ double quotes
 triple double quotes
 
 ## Type Conversion
+
 ```int()```
+
 ```float()```
+
 ```str()```
 
 ## Input
+
 ```<user_input> = input(<prompt>)```
 
 ## Reassignment
