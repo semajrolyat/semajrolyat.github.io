@@ -3,7 +3,7 @@ layout: post
 title:  "Types"
 date:   2018-09-06 00:00:00 -0400
 schedule:   2018-09-06 00:00:00 -0400
-categories: [preview]
+categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 4.4-4.7"
