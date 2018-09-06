@@ -70,19 +70,19 @@ b = sqrt(a)
 ```
 > We have not discussed the concept of a function in depth yet and I have used the term occasionally so far; however, the turtle "commands", the print "command", and the sqrt "command" are all functions built into Python.  We will discuss functions more in depth in a future class including how you can write functions of your own.
 
-# Exercises
+## Exercises
 Each exercise describes exactly what you must submit.  **DO NOT** submit individual files.  Save everything described into one folder, zip that folder, and submit the zip containing all files.
 
 In your ```cs1012``` folder create a subfolder named ```09_06_2018```.  Save all of your work from today in this folder.  When you complete your work, zip the ```09_06_2018``` folder and submit it to blackboard.  These exercises are due before the next class.
 
-## Exercise 1 - Hello World!
+#### Exercise 1 - Hello World!
 Write a "Hello World" script using spyder.  Save this script as ```hello.py```.  Run the script and verify the expected output is produced in spyder's Python console.
 
 Submit ```hello.py```.
 
 > This exercise will make sure you can run a very simple script using spyder and will be your first practice using strings and printing.
 
-## Exercise 2 - Turtle with Variables and User Input
+#### Exercise 2 - Turtle with Variables and User Input
 Write a script that implements the circumscribed diamond from the introductory [Exercise 2]({{ "/gwu/fa18/cs1012/2018/08/28/exercises.html" | absolute_url }}); however, you will take user input to determine the radius of the circle.  In addition, you need to center this drawing, and you will also need to use the ```sqrt``` function to compute the length of the diamond's edge.
 
 Your input prompt should read "Enter the radius of the circle: ".  Use the user input value to compute the distance necessary to center the drawing and for each command necessary to complete the drawing.  Save your script as ```diamond.py```.
@@ -93,7 +93,7 @@ Submit both ```diamond.py```, ```diamond50.png```, and ```diamond100.png```.
 
 > This exercise will allow you to work with expressions, variables, types, user input, and the mathematical function ```sqrt```.
 
-## Exercise 3 - Quadratic Formula
+#### Exercise 3 - Quadratic Formula
 Recall that a Quadratic Equation has the form:
 
 ![Quadratic Equation]({{ "/gwu/fa18/cs1012/assets/09_06_2018/quadratic-eq.png" | absolute_url }})
