@@ -3,13 +3,16 @@ layout: post
 title:  "Exercises"
 date:   2018-09-04 00:00:00 -0400
 schedule:   2018-09-04 00:00:00 -0400
-categories: [GWU]
+categories: [removed]
 docclass: "exercises"
 gwclass: "cs1012"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
 </head>
+
+# Notes
+Removed because of technical problems running IDLE on student computers.  Content has been recycled into 2018-09-06 exercises and the instructions for running an IDE have been clarified.  We are no longer recommending IDLE but instead we are recommending spyder which is a much more modern interface, is readily available in Anaconda, is installed already on lab computers, and should be easier to use by and teach to students.  
 
 ## Interactive Development and Learning Environment (IDLE)
 As indicated in the previous class, it is beneficial to write a Python program in a script rather than in the interactive console.  In order to write a script, we will need to use a text editor.  There are a broad array of editors available that will make programming much easier; however, due to the differences between each student's system, we will use the built in Python IDLE program as our editor of choice.  To run idle, open the interactive python shell and type the following two commands:
