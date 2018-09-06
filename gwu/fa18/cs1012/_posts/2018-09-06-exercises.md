@@ -75,6 +75,8 @@ Each exercise describes exactly what you must submit.  **DO NOT** submit individ
 
 In your ```cs1012``` folder create a subfolder named ```09_06_2018```.  Save all of your work from today in this folder.  When you complete your work, zip the ```09_06_2018``` folder and submit it to blackboard.  These exercises are due before the next class.
 
+You **MUST** include comments in your code.  If your code contains no comments, it is incomplete and will not receive credit.  Comments are as important to your code as the code itself.
+
 #### Exercise 1 - Hello World!
 Write a "Hello World" script using spyder.  Save this script as ```hello.py```.  Run the script and verify the expected output is produced in spyder's Python console.
 
