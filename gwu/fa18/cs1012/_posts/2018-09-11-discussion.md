@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "For Loop"
-date:   2018-08-11 00:00:00 -0400
+date:   2018-09-11 00:00:00 -0400
 schedule:   2018-09-11 00:00:00 -0400
 categories: [preview]
 docclass: "discussion"
