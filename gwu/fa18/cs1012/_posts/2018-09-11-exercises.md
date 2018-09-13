@@ -44,11 +44,29 @@ done()
 ```
 A square is a regular polygon --- it is both equilateral and equiangular --- and drawing any regular polygon involves the same basic procedure.
 
-The values used for the angles are determined by the fact that a square is by definition fully enclosed and has four sides of equal length (equilateral).  From this definition, we know a square must also have four angles, _i.e._ an angle between each pair of adjacent edges, of equal degree (equiangular).  The value of that angle is defined by:
+The values used for the angles are determined by the fact that a square is by definition fully enclosed and has four sides of equal length (equilateral).  From this definition, we know a square must also have four angles, _i.e._ an angle between each pair of adjacent edges, of equal degree (equiangular).
 
->```angle = 90 (degrees per angle) = 360 (degrees) / 4 (angles)```
+The degree of the internal angle for a regular polydon is defined by the following formula:
 
-We can generalize the code for drawing a square a step further by computing the angle between edges using above formula:
+>```internal angle = 180(1-2/n)``` where ```n``` is the number of sides.
+
+Therefore, the internal angle for a square is computed as:
+
+>```internal angle = 90 (degrees per angle) = 180(1/2) = 180(1-2/4)```
+
+However, consider that in order to turn the turtle with the correct angle, the turtle **does not** turn along the internal angle but instead turns along the external angle.  The folloing image illustrates how the turtle must turn:
+
+![Turtle turn angle in a regular polygon]({{ "/gwu/fa18/cs1012/assets/09_11_2018/polygon-angle.png" | absolute_url }})
+
+This implies that to compute the external angle along which the turtle must turn, we change the internal angle formula to the following:
+
+ >```external angle = 180 - 180(1-2/n)```
+
+ which simplifies to:
+
+ >```external angle = 360/n```
+
+We can generalize the code for drawing a square a step further by computing the turn angle for the turtle, _i.e._ the external angle, using above formula:
 ```python
 from turtle import *
 
