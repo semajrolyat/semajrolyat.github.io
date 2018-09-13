@@ -6,7 +6,8 @@ schedule:   2018-09-11 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "HtTLaCS 3.1-3.5"
+reading: "HtTLaCS 3.1-3.5 & 6.1-6.3"
+exercises: "/gwu/fa18/cs1012/2018/09/11/exercises.html"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">

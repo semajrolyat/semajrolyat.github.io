@@ -3,7 +3,7 @@ layout: post
 title:  "Exercises"
 date:   2018-09-11 00:00:00 -0400
 schedule:   2018-09-11 00:00:00 -0400
-categories: [preview]
+categories: [GWU]
 docclass: "exercises"
 gwclass: "cs1012"
 ---
@@ -54,7 +54,7 @@ Therefore, the internal angle for a square is computed as:
 
 >```internal angle = 90 (degrees per angle) = 180(1/2) = 180(1-2/4)```
 
-However, consider that in order to turn the turtle with the correct angle, the turtle **does not** turn along the internal angle but instead turns along the external angle.  The folloing image illustrates how the turtle must turn:
+However, consider that in order to turn the turtle with the correct angle, the turtle **does not** turn along the internal angle but turns instead along the external angle.  The following image illustrates how the turtle must turn:
 
 ![Turtle turn angle in a regular polygon]({{ "/gwu/fa18/cs1012/assets/09_11_2018/polygon-angle.png" | absolute_url }})
 
