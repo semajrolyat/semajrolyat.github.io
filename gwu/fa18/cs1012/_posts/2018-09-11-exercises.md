@@ -129,7 +129,7 @@ Submit ```zerototen.py```.
 > This exercise practices looping using a ```for``` loop and the one parameter ```range``` function.
 
 #### Exercise 3 - Sum all positive even integers less than 100
-Write a script that computes the sum of all positive integers less than 100 and prints the total sum after the computation finishes.  You must use a ```for``` loop with the ```range``` function to perform this computation.  Save this script as ```evensum.py```.
+Write a script that computes the sum of all positive even integers less than 100 and prints the total sum after the computation finishes.  You must use a ```for``` loop with the ```range``` function to perform this computation.  Save this script as ```evensum.py```.
 
 Your program should produce the following output:
 ```
