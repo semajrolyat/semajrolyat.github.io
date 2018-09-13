@@ -79,7 +79,7 @@ for i in range(4):
 done()
 ```
 
-**Question**: In the above code, we see the literal ```4``` repeated, but what does that ```4``` really represent?  If you gave ```4``` a name and treated it as a variable, what would you name it?  What type should that variable have?
+**Question**: In the above code, we see the literal ```4``` repeated, but what does that ```4``` really represent?  If you gave ```4``` a name and treated it as a variable, what would you name it?  What type must that variable have?
 
 ## Exercises
 Each exercise describes exactly what you must submit.  **DO NOT** submit individual files.  Save everything described into one folder, zip that folder, and submit the zip containing all files.
@@ -88,7 +88,59 @@ In your ```cs1012``` folder create a subfolder named ```09_11_2018```.  Save all
 
 You **MUST** include comments in your code.  If your code contains no comments, it is incomplete and will not receive credit.  Comments are as important to your code as the code itself.
 
-#### Exercise 1 - Draw a Regular Polygon
+#### Exercise 1 - Iterate over a list of the days of the week
+Write a script that iterates using a ```for``` loop that prints the days of the week.  Create a list composed of the strings ```"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"```.  Iterate over the list and each pass through the loop, print out the loop variable.  This loop will print a different day of the week on each line of output.  Save this script as ```daysofweek.py```.
+
+Your program should produce the following output:
+```
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+```
+
+Submit ```daysofweek.py```.
+
+> This exercise practices looping using a ```for``` loop with a defined list.
+
+#### Exercise 2 - Iterate over the range from zero to ten
+Write a script that iterates using a ```for``` loop that prints all integers from 0 to 10.  You must use the ```range``` function to generate the list used to control the ```for``` loop and you must print the loop variable each iteration of the loop to produce the desired output.  Save this script as ```zerototen.py```.
+
+Your program should produce the following output:
+```
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+Submit ```zerototen.py```.
+
+> This exercise practices looping using a ```for``` loop and the one parameter ```range``` function.
+
+#### Exercise 3 - Sum all positive even integers less than 100
+Write a script that computes the sum of all positive integers less than 100 and prints the total sum after the computation finishes.  You must use a ```for``` loop with the ```range``` function to perform this computation.  Save this script as ```evensum.py```.
+
+Your program should produce the following output:
+```
+2450
+```
+
+Submit ```evensum.py```.
+
+> This exercise practices looping using a ```for``` loop and the three parameter ```range``` function.
+
+#### Exercise 4 - Draw a Regular Polygon
 Write a script using spyder to draw a regular polygon.  Save this script as ```polygon.py```.
 Your script must take the length of an edge as user input and your script must also take the number of sides as user input.  Given these two values, use a ```for``` loop to draw the regular polygon specified by the user.
 
@@ -98,4 +150,4 @@ Your script must take the length of an edge as user input and your script must a
 
 Submit ```polygon.py```, ```triangle.png```, ```hexagon.png``` and ```octogon.png```.
 
-> This exercise will allow you to work with expressions, variables, types, user input, and the ```for``` loop using the ```range``` function.
+> This exercise practices work with expressions, variables, types, user input, and the ```for``` loop using the ```range``` function.
