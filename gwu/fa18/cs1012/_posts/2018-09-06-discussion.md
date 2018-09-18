@@ -48,6 +48,8 @@ multi-line
 string
 """
 ```
+**Question**: If triple quotes are legitimate, why not a set of double quotes?
+
 
 ### Checking Type
 We can check the type of an expression by using the ```type(x)``` function.

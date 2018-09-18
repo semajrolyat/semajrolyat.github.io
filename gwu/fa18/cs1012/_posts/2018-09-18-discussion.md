@@ -1,0 +1,278 @@
+---
+layout: post
+title:  "Functions"
+date:   2018-09-18 00:00:00 -0400
+schedule:   2018-09-18 00:00:00 -0400
+categories: [preview]
+docclass: "discussion"
+gwclass: "cs1012"
+reading: "HtTLaCS 6.4-6.9"
+---
+<head>
+  <link href="/css/syntax.css" rel="stylesheet">
+</head>
+
+### Calling a Function
+We have used a number of built in Python functions throughout our work so far which have generally been described as "commands", but the more correct name is _function_.  Functions also sometimes called _methods_.
+
+For example, we have called the ```forward``` function from the turtle module to move the turtle forward.  The ```forward``` function accepts one parameter, _i.e._ a value inside the parentheses, that tells the turtle how many units to move forward.  For example, the following code instructs the turtle to move forward 100 units:
+```python
+from turtle import *
+forward(100)
+```
+Likewise, we have used the ```left``` and ```right``` functions to turn the turtle and the ```penup``` and ```pendown``` functions to control whether or not the turtle draws when the turtle is instructed to move.
+
+We _call_ a function by specifying the function name followed by a pair of parenthesis which may contain one or more parameters.
+
+When we call ```forward```, we are calling the ```forward``` function in the [Python turtle module](https://docs.python.org/3/library/turtle.html#turtle.forward).  The ```forward``` function has the following declarion:
+```python
+def forward(distance):
+```
+The value we have been providing to the ```forward``` function inside the parentheses is handled inside the ```forward``` function as a variable named ```distance```.
+
+The ```forward``` function _encapsulates_ all of the operations necessary to move the turtle forward which includes all the drawing operations needed to draw on the window.  We do not need to know how the turtle draws, we only need to know how to call ```forward``` in order to move the turtle and draw.  This is known as _information hiding_.
+
+> Functions are one means of _encapsulation_ and _information hiding_.  We will talk about this in more detail when we discuss classes and object oriented programming.
+
+Functions promote _reusabiltiy_ which we have established as an important tenet of programming.
+
+_________
+### Defining our own Functions
+We can define our own Python functions using the function _definition_ structure:
+```python
+def name(parameters):
+    statements
+```
+
+The definition for a Python function has the following requirements:
+* A function definition must begin with the ```def``` keyword.
+* A function definition must have a ```name``` which follows the same naming rules as variables.
+* A function definition must include a set of parentheses following the ```name```.
+* The parentheses must be followed by a colon ```:``` character.
+* Everything inside the body of the function must be indented.
+* Inside the parentheses, parameters may be specified.
+
+> The first line of a function definition, from the ```def``` keyword to the colon ```:```, is also known as the function _declaration_.
+_________
+### Functions must be defined before they can be used
+Recall that Python is processed sequentially.  Functions must be defined before they can be called.  In other words, a function must be defined in the script above where they are used.
+
+##### ERROR Attempting to use a function before it is defined
+In this example, the function ```foo``` is defined after it is called.  Because the Python Interpreter has not encountered a definition for ```foo``` yet, the program generates an error:
+```python
+# main program
+foo()
+
+def foo():
+    print("called foo")
+```
+The Python interpreter will produce the following error if the above program is run:
+```
+NameError: name 'foo' is not defined
+```
+##### Correctly defining a function before using it
+```python
+def foo():
+    print("called foo")
+
+# main program
+foo()
+```
+Python scripts are typically structured such that all functions are defined at the beginning of the script and the "main" program is defined at the end of the script.
+
+
+_________
+### Parameters
+Parameters are specified as a number of comma separated variables inside the parentheses following the function ```name```; however, a function does not have to require parameters.  For functions that accept no parameters, the parentheses will have nothing in between them:
+```python
+def ex_noparams():
+    print("This function has no parameters")
+```
+
+Conversely, a function may accept a variety of parameters separated by commas inside the parentheses:
+```python
+def ex_twoparams(p1, p2):
+    print("This function accepts two parameters named p1 and p2", p1, p2)
+```
+Parameters are treated as variables that are locally defined for a function.
+
+> There is an upper limit on the number of parameters that you can specify for a function; however, this number is sufficiently large that the actual limitation is irrellevant.  What is more important is that defining a function with too many parameters makes the function more difficult to use and is usually a sign of poor design.  We will discuss how to appropriately manage the number of parameters later in the term.
+
+#### Arguments and Parameters
+The terms _argument_ and _parameter_ have slightly different connotations but are often used interchangably.  The difference is somewhat trivial in terms of the objectives of this course and we will make no real distinction between these terms in this course so you can consider these terms to by synonyms.
+
+To clarify the two terms a bit, an "argument" is a value passed to a function from the calling context and a "parameter" is the field that is received in the function.  The distinction arises because parameters are represented locally in the function as variables but the arguments passed to the function may be variable or literal.  However, to make this more confusing, the term "parameter" is used interchangeably in the context of "argument".
+
+```python
+def ex_argsvsparams(param1, param2):
+    # inside the function, "arguments" are parameters which are variables
+    print("Hello")
+
+arg1 = "arg1"
+ex(arg1, "arg2")  # arguments can be variables and/or literals
+```
+
+> In other languages, the programmer typically specifies the type of the parameter, but in Python we do not.  A parameter will have the same type as the argument passed to it.  You may have to use type conversion to make sure a parameter has the correct type.
+
+_________
+### Returning data from a function
+Functions can perform computations and _return_ the results of those computations.  In order to return results, we must use the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` marks the end of a function and assigns a value to the function itself which can be used in an expression in the calling context.
+
+For example, in the following function, the value of ```10``` is returned from the function ```bar``` and ```x``` is assigned the returned value ```10```:
+
+```python
+def bar():
+    return 10
+x = bar()       # this is the calling context
+```
+
+Recall that we needed the hypotenuse of a right triangle for our diamond drawings.  We could use a function to compute the hypotenuse instead:
+
+```python
+"""
+returns the length of the hypotenuse for a right triangle given side1 and side2
+"""
+def hypotenuse(side1,side2):
+    return sqrt(side1**2 + side2**2)
+radius = 50
+length = hypotenuse(radius,radius)
+```
+
+> One novel aspect of Python is that functions may return multiple values.  Most languages only allow one value to be returned from a function.
+
+_________
+### Scope
+The term _scope_ is used to describe the visibility and lifespan of variables and functions.
+
+A variable is only visible and only lives within the scope that it is defined.  For example, variables that are defined inside a function are only visible and only live inside the body of that function.  This means that variables defined inside a function have _local scope_ and are _local variables_ of that function.  In other words, variables that are defined inside a function have no meaning outside of the function in which they are defined.  Parameters are always _local variables_.
+
+Variables that have been used outside a function are generally not visible inside a function.  This is beneficial because we can reuse the same names in different contexts.  Sometimes we do wish to make variables from other contexts available to functions.  We can do this by either making a variable global or by passing a variable to a function as a parameter.
+
+A _global variable_ is a variable that is defined outside the scope of all functions or at _global scope_.  It is possible to access a global variable from inside a function, but it is not advised.
+
+```python
+myglobal = 10     # myglobal has global scope
+def fun(p1):      # p1 is has scope local to fun.
+    mylocal = 5   # mylocal has scope local to fun.  mylocal is undefined outside of fun
+    x = 2         # a variable named x at local scope.  It is not the same as the 'global x'
+x = 1             # a variable named x at global scope
+fun(1)
+```
+
+
+
+> Using global variables is discouraged.  Global variables typically remove the ability to reuse code in other contexts.  There are some exceptions to this guideline, but as new programmers, you should avoid attempting to access a variable that is defined outside a function.  We will discuss how to pass a large number of values to a function without needing to enumerate them all which is often the best approach rather than using either a global or adding extra parameters.
+
+### Documenting functions
+While we do not need to know how a function works, we do need to know how to use a function.  Every function should have a block comment describing what the function does, what each parameter means, and what the function returns.  A block comment can be provided using hash comments or triple quotes and it should precede the function declaration.
+
+Recall our hypotenuse function from before:
+```python
+"""
+returns the length of the hypotenuse for a right triangle given side1 and side2
+"""
+def hypotenuse(side1,side2):
+    return sqrt(side1**2 + side2**2)
+radius = 50
+length = hypotenuse(radius,radius)
+```
+The comments that document the function precede the function declaration and the comments are concise yet detail the parameters, what the function does, and what the function returns.
+
+> Many programmers do not document their code enough.  Without documentation, it is very unlikely that anyone will ever use your code.  Documentation is simply another task that is necessary during software development.
+
+### Parameters are "passed by value".
+Parameters are copies of the arguments that are supplied by the calling context.  This means that if we change the value associated with a parameter inside the function, it will **NOT** update the value of the argument in the calling context.  For example, in the following code, changes to the local variable ```i``` inside the function ```ex_byvalue``` has no affect on the value of ```i``` in the calling context:
+```python
+def ex_byvalue(i):
+    i = i + 1
+    print(i)
+
+i = 1
+ex_byvalue(i)
+print(i)
+```
+The code above produces the following output:
+```
+2
+1
+```
+Note that the value of the local ```i``` is incremented, but the value of the ```i``` in the calling context remains what it was before the function ```ex_byvalue``` was called.
+ 
+### Functions within Functions
+Recall the code we have so far used to draw a square:
+```python
+from turtle import *
+
+x = 100
+for i in range(4)
+    forward(x)
+    left(90)
+
+done()
+```
+This code works because it repeatedly calls the functions ```forward``` and ```left``` from the ```turtle``` module.  We can write our own function so that we can reuse this square code without needing to write it more than once.  For example, the following code accomplishes the same goal, but it enables us to draw squares without needing to write the same ```for``` loop multiple times:
+```python
+from turtle import *
+def square(length):
+  for i in range(4):
+      forward(length)
+      left(90)
+
+square(100)
+done()
+```
+We are calling the ```forward``` and ```left``` functions from within our own function.  Code mostly consists of calling functions from other functions.
+
+### Reuse
+We may draw many squares by calling the same function repeatedly.  By allowing the ```length``` to be provided through a parameter, we can draw any sized square by supplying a different argument.  In the following code, we call the square function multiple times with different lengths:
+```python
+from turtle import *
+def square(length):
+  for i in range(4):
+      forward(length)
+      left(90)
+
+square(100)
+square(80)
+square(60)
+square(40)
+square(20)
+done()
+```
+The above code produces the following drawing:
+
+![Turtle Squares]({{ "/gwu/fa18/cs1012/assets/09_18_2018/squares.png" | absolute_url }})
+
+_________
+### Optional Parameters
+Parameters can be specified to be optional by providing a _default value_.  The default value is specified by assigning a value to the parameter in the function declaration.  An optional parameter may be omitted when calling the function.  If an optional parameter is omitted, the parameter will be set to the default value. Optional parameters must appear at the end the parameter declarations.
+
+```python
+def opts(p1, p2, p3=0):
+    print("parameters p1 and p2 are required but p3 is optional")
+
+# main program
+opts(1,2)      # calls with the values (p1=1, p2=2, p3=0)
+opts(1,2,3)    # calls with the values (p1=1, p2=2, p3=3)
+```
+_________
+### Functions with the same name
+
+Two functions can have the same name but they must have a different number of parameters.
+Optional parameters are not considered when comparing two function declarations.
+
+```python
+def baz():
+    print("called bar with no parameters")
+
+def baz(p1):
+    print("called bar with one parameter")
+
+def baz(p1, p2, p3=0):
+    print("called bar with two + optional parameters")
+
+# main program
+baz()     # calls bar with no parameters
+baz(1)    # calls bar with one parameter
+baz(1,2)  # calls bar with two and optional parameters
+```
