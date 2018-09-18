@@ -3,7 +3,7 @@ layout: post
 title:  "Functions"
 date:   2018-09-18 00:00:00 -0400
 schedule:   2018-09-18 00:00:00 -0400
-categories: [preview]
+categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 6.4-6.9"
@@ -34,7 +34,7 @@ The ```forward``` function _encapsulates_ all of the operations necessary to mov
 
 > Functions are one means of _encapsulation_ and _information hiding_.  We will talk about this in more detail when we discuss classes and object oriented programming.
 
-Functions promote _reusabiltiy_ which we have established as an important tenet of programming.
+Functions promote _reusability_ and _generalizability_ which we have established as an important tenet of programming.
 
 _________
 ### Defining our own Functions
@@ -197,7 +197,7 @@ The code above produces the following output:
 1
 ```
 Note that the value of the local ```i``` is incremented, but the value of the ```i``` in the calling context remains what it was before the function ```ex_byvalue``` was called.
- 
+
 ### Functions within Functions
 Recall the code we have so far used to draw a square:
 ```python
