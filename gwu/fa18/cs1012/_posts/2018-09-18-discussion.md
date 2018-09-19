@@ -136,7 +136,7 @@ This script produces the following output:
 ```
 This might seem nonsensical, but it is entirely consistent if you remember that parameters are assigned based on the position of the argument and not based on any name an argument might have had before the function was called.  The ambiguity with names is eliminated if we simply rename the parameters in the previous example:
 
-```python class:"LineNo"
+```python {.line-numbers}
 def myfun(p,q):
     print(p,q)
 
