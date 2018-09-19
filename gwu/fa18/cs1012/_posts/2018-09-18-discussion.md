@@ -103,6 +103,8 @@ The terms _argument_ and _parameter_ have slightly different connotations but ar
 
 To clarify the two terms a bit, an "argument" is a value passed to a function from the calling context and a "parameter" is the field that is received in the function.  The distinction arises because parameters are represented locally in the function as variables but the arguments passed to the function may be variable or literal.  However, to make this more confusing, the term "parameter" is used interchangeably in the context of "argument".
 
+If you see the term argument in these pages, the context will always be in terms of a value passed to a function from the calling side.
+
 ```python
 def ex_argsvsparams(param1, param2):
     # inside the function, "arguments" are parameters which are variables
@@ -114,6 +116,38 @@ ex(arg1, "arg2")  # arguments can be variables and/or literals
 
 > In other languages, the programmer typically specifies the type of the parameter, but in Python we do not.  A parameter will have the same type as the argument passed to it.  You may have to use type conversion to make sure a parameter has the correct type.
 
+
+### Position determines parameter assignment
+Arguments are mapped to parameters depending on the position at which they appear inside the parentheses.  This allows variables that are passed to a function to be remapped/renamed to a different variable name.  This can be very confusing for new programmers.  For example, consider the following script:
+
+```python
+def myfun(x,y):
+    print(x,y)
+
+x = 5
+y = 10
+myfun(y,x)
+print(x,y)
+```
+This script produces the following output:
+```
+10 5
+5 10
+```
+This might seem nonsensical, but it is entirely consistent if you remember that parameters are assigned based on the position of the argument and not based on any name an argument might have had before the function was called.  The ambiguity with names is eliminated if we simply rename the parameters in the previous example:
+
+```python class:"LineNo"
+def myfun(p,q):
+    print(p,q)
+
+x = 5
+y = 10
+myfun(y,x)
+print(x,y)
+```
+This example is the exact same program and helps to illustrate that there is no relationship between the parameters inside the function and the variables outside the function other than what is specified by the positioning of the arguments when the function is called.
+
+A trace of the previous example
 _________
 ### Returning data from a function
 Functions can perform computations and _return_ the results of those computations.  In order to return results, we must use the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` marks the end of a function and assigns a value to the function itself which can be used in an expression in the calling context.
