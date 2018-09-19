@@ -57,7 +57,7 @@ _________
 ### Functions must be defined before they can be used
 Recall that Python is processed sequentially.  Functions must be defined before they can be called.  In other words, a function must be defined in the script above where they are used.
 
-##### ERROR Attempting to use a function before it is defined
+#### ERROR Attempting to use a function before it is defined
 In this example, the function ```foo``` is defined after it is called.  Because the Python Interpreter has not encountered a definition for ```foo``` yet, the program generates an error:
 ```python
 # main program
@@ -70,7 +70,7 @@ The Python interpreter will produce the following error if the above program is 
 ```
 NameError: name 'foo' is not defined
 ```
-##### Correctly defining a function before using it
+#### Correctly defining a function before using it
 ```python
 def foo():
     print("called foo")
@@ -147,7 +147,27 @@ print(x,y)
 ```
 This example is the exact same program and helps to illustrate that there is no relationship between the parameters inside the function and the variables outside the function other than what is specified by the positioning of the arguments when the function is called.
 
-A trace of the previous example
+A trace of the previous example may help show how the system is operating:
+```python
+def myfun(p,q):
+    print(p,q)
+
+x = 5            # x = 5
+y = 10           # x = 5, y = 10
+myfun(y,x)       # x = 5, y = 10 -> myfun(10,5) -> myfun's p = 10, q = 5
+print(x,y)       # x = 5, y = 10 -> print(5,10)
+```
+If we take a step back to the original example, we might now see that the parameters for ```myfun``` remap the names ```x``` and ```y``` and the only association between the ```x``` and ```y``` outside of ```myfun``` and the ```x``` and ```y``` inside ```myfun``` is the position of the parameter and the position of the argument.  Here is the trace in the original context:
+```python
+def myfun(x,y):
+    print(x,y)
+
+x = 5            # (global) x = 5
+y = 10           # (global) x = 5, y = 10
+myfun(y,x)       # (global) x = 5, y = 10 -> (myfun) x = 10, y = 5
+print(x,y)       # (global) x = 5, y = 10 -> print(5,10)
+```
+
 _________
 ### Returning data from a function
 Functions can perform computations and _return_ the results of those computations.  In order to return results, we must use the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` marks the end of a function and assigns a value to the function itself which can be used in an expression in the calling context.
