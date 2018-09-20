@@ -53,6 +53,7 @@ The definition for a Python function has the following requirements:
 * Inside the parentheses, parameters may be specified.
 
 > The first line of a function definition, from the ```def``` keyword to the colon ```:```, is also known as the function _declaration_.
+
 _________
 ### Functions must be defined before they can be used
 Recall that Python is processed sequentially.  Functions must be defined before they can be called.  In other words, a function must be defined in the script above where they are used.
@@ -79,7 +80,6 @@ def foo():
 foo()
 ```
 Python scripts are typically structured such that all functions are defined at the beginning of the script and the "main" program is defined at the end of the script.
-
 
 _________
 ### Parameters
@@ -196,7 +196,7 @@ length = hypotenuse(radius,radius)
 
 _________
 ### Scope
-The term _scope_ is used to describe the visibility and lifespan of variables and functions.
+The term _scope_ is used to describe the _visibility_ and _lifespan_ of variables and functions.
 
 A variable is only visible and only lives within the scope that it is defined.  For example, variables that are defined inside a function are only visible and only live inside the body of that function.  This means that variables defined inside a function have _local scope_ and are _local variables_ of that function.  In other words, variables that are defined inside a function have no meaning outside of the function in which they are defined.  Parameters are always _local variables_.
 
@@ -212,8 +212,6 @@ def fun(p1):      # p1 is has scope local to fun.
 x = 1             # a variable named x at global scope
 fun(1)
 ```
-
-
 
 > Using global variables is discouraged.  Global variables typically remove the ability to reuse code in other contexts.  There are some exceptions to this guideline, but as new programmers, you should avoid attempting to access a variable that is defined outside a function.  We will discuss how to pass a large number of values to a function without needing to enumerate them all which is often the best approach rather than using either a global or adding extra parameters.
 
@@ -235,6 +233,21 @@ The comments that document the function precede the function declaration and the
 > Many programmers do not document their code enough.  Without documentation, it is very unlikely that anyone will ever use your code.  Documentation is simply another task that is necessary during software development.
 
 ### Parameters are "passed by value".
+Consider the following code:
+```python
+def swap(x,y):
+    tmp = x
+    x = y
+    y = tmp
+    print(x,y)
+
+x = 2
+y = 11
+swap(x,y)
+print(x,y)
+```
+> What do you expect will be printed for the above?  What is actually printed?  Why does the above print what it does?
+
 Parameters are copies of the arguments that are supplied by the calling context.  This means that if we change the value associated with a parameter inside the function, it will **NOT** update the value of the argument in the calling context.  For example, in the following code, changes to the local variable ```i``` inside the function ```ex_byvalue``` has no affect on the value of ```i``` in the calling context:
 ```python
 def ex_byvalue(i):
