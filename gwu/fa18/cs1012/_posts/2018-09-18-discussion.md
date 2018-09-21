@@ -270,7 +270,33 @@ x = 1             # a variable named x at global scope
 fun(1)
 ```
 
-> Using global variables is discouraged.  Global variables typically remove the ability to reuse code in other contexts.  There are some exceptions to this guideline, but as new programmers, you should avoid attempting to access a variable that is defined outside a function.  We will discuss how to pass a large number of values to a function without needing to enumerate them all which is often the best approach rather than using either a global or adding extra parameters.
+The following example is intended to illustrate an attempt to access a variable that is defined at a global scope from inside a function.  This type of approach should almost **never** be used.  It is possible, but deeply discouraged...
+
+```python
+myglobal = 10            # myglobal has global scope
+def fun2():
+    mylocal = myglobal   # the intent here appears to be to assign a local variable from the global variable
+fun2()
+```
+The correct way to implement the intent illustrated by ```fun2``` is to pass the global into the function using a parameter which will make the variable a local.  For example:
+```python
+myglobal = 10            # myglobal has global scope
+def fun3(mylocal):
+    # do stuff
+    return
+fun3(myglobal)
+```
+
+```fun3``` is the correct approach because ```fun3``` forces the users of the function to explicitly assign all parameters and a local copy of the global will be made.  There will be no possibility of mysterious changes to ```myglobal``` by ```fun3``` and the programmer who uses ```fun3``` will know exactly what parameters must be provided.  A programmer still has the option of updating ```myglobal``` in a more controlled and safer way if the updated value is returned by the function.  For example, if the intent is for the function to produce an answer that should update ```myglobal```, the code should be designed this way:
+```python
+myglobal = 10            # myglobal has global scope
+def fun4(mylocal):
+    # do stuff like updata mylocal
+    return mylocal
+myglobal = fun4(myglobal)
+```
+
+> Passing data to a function outside of parameters, _i.e._ by using a global variable instead, is discouraged.  If a function contains a global variable inside its body, the function cannot be reused in other contexts.  There are some exceptions to this guideline, but as new programmers, you should avoid attempting to access a variable that is defined outside a function from inside that function.  We will discuss how to pass a large number of values to a function without needing to enumerate them all which is often the best approach rather than attempting to access a global variable from inside a functions or by adding too many extra parameters.
 
 ### Documenting functions
 While we do not need to know how a function works, we do need to know how to use a function.  Every function should have a block comment describing what the function does, what each parameter means, and what the function returns.  A block comment can be provided using hash comments or triple quotes and it should precede the function declaration.
