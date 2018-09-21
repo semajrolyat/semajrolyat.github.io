@@ -169,10 +169,41 @@ print(x,y)       # (global) x = 5, y = 10 -> print(5,10)
 ```
 
 _________
-### Returning data from a function
-Functions can perform computations and _return_ the results of those computations.  In order to return results, we must use the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` marks the end of a function and assigns a value to the function itself which can be used in an expression in the calling context.
+### The ```return``` Keyword
+The ```return``` keyword allows the normal control flow of functions to be superceded.  If a statement begins with ```return```, the function will immediately return back to the calling context.
+```python
+def biz():
+  a = 1
+  return     # biz() returns to the calling context here because of the return
+  b = 2      # due to the previous statement, this statement is unreachable
 
-For example, in the following function, the value of ```10``` is returned from the function ```bar``` and ```x``` is assigned the returned value ```10```:
+biz()
+```
+
+There is an implicit ```return``` at the end of all functions.  For example, the following code:
+```python
+def buz():
+  a = 1
+
+biz()
+```
+
+Is actually processed like this:
+```python
+def buz():
+  a = 1
+  return     # this return is not necessary because it is implied at the end of all functions
+
+biz()
+```
+
+Until we look a little deeper at branching, usage of ```return``` in this way will seem a little unnecessary; however, ```return``` is dual usage and for our immediate needs ```return``` offers us the ability to return data from a function to the calling context.
+
+_________
+### Returning data from a function
+Functions can perform computations and _return_ the results of those computations using the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` assigns a value to the function itself which can be used in an expression in the calling context.
+
+For example, in the following function, the value of ```10``` is returned from the function ```bar()``` and ```x``` is assigned the value of ```10``` that was returned from ```bar()```:
 
 ```python
 def bar():
@@ -180,7 +211,7 @@ def bar():
 x = bar()       # this is the calling context
 ```
 
-Recall that we needed the hypotenuse of a right triangle for our diamond drawings.  We could use a function to compute the hypotenuse instead:
+When we wrote our scripts for the diamond exercises, we needed to compute the hypotenuse of a right triangle.  We could use our own function to compute the hypotenuse instead:
 
 ```python
 """
@@ -205,17 +236,17 @@ def jaz():
 
 result = fiz() + buz() * jaz()
 ```
-Recall that expressions are computed from left to right.  When the last line ```result = fiz() + buz()```, the operations proceed in the following order:
+Recall that expressions are computed from left to right.  When the last line ```result = fiz() + buz() * jaz()```, the operations proceed in the following order:
 1. The expression on the right side of the assignment is computed first.
-2. The expression is scanned from left to right and any precedence rules are applied.
-3. Binary multiplication has the highest precedence, so the two operands needed for multiplication are evaluated:
-   1. ```buz()``` is the left multiplication operand, so ```buz()``` is called and its return value ```2``` is used as the left operand.
-   2. ```jaz()``` is the right multiplication operand, so ```jaz()``` is called and its return value ```-1``` is used as the right operand.
-   3. Multiplication is performed on the results of the calls to ```buz()``` and ```jaz()``` which produces the single value of ```-2```.
-4. Binary addition has the highest precedence of the remaining operations, so the two operands needed for addition are evaluated:
-   1. ```fiz()``` is the left addition operand, so ```fiz()``` is called and its return value ```3``` is used as the left operand.
-   2. ```-2``` is the right operand which was computed from the previous operation.
-   3. Addition is performed on the result of the call to ```fiz()``` and the previous multiplication which produces the single value of ```1```.
+   1. The expression is scanned from left to right and any precedence rules are applied.
+   1. Binary multiplication has the highest precedence, so the two operands needed for multiplication are evaluated:
+      1. ```buz()``` is the left multiplication operand, so ```buz()``` is called and its return value ```2``` is used as the left operand.
+      2. ```jaz()``` is the right multiplication operand, so ```jaz()``` is called and its return value ```-1``` is used as the right operand.
+      3. Multiplication is performed on the results of the calls to ```buz()``` and ```jaz()``` which produces the single value of ```-2```.
+   2. Binary addition has the highest precedence of the remaining operations, so the two operands needed for addition are evaluated:
+      1. ```fiz()``` is the left addition operand, so ```fiz()``` is called and its return value ```3``` is used as the left operand.
+      2. ```-2``` is the right operand which was computed from the previous operation.
+      3. Addition is performed on the result of the call to ```fiz()``` and the previous multiplication which produces the single value of ```1```.
 5. The right side expression contains no more operators to evaluate and has been resolved as a value, so that value is assigned to the left side, ```result = 1```.
 
 > One novel aspect of Python is that functions may return multiple values.  Most languages only allow one value to be returned from a function.
