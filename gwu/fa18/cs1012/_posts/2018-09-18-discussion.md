@@ -192,6 +192,32 @@ radius = 50
 length = hypotenuse(radius,radius)
 ```
 
+Recall that in assignment, the right side is evaluated first, and therefore in the final statement ```length = hypotenuse(radius,radius)```, the ```hypotenuse``` function is called first.  The ```hypotenuse``` function performs its computations and the value is returned back to the calling context.  The assignment of ```length``` is then performed and ```length``` is assigned whatever value was computed by calling ```hypotenuse(radius,radius)```.
+
+To illustrate further, consider the following code:
+```python
+def fiz():
+    return 3;
+def buz():
+    return 2;
+def jaz():
+    return -1;
+
+result = fiz() + buz() * jaz()
+```
+Recall that expressions are computed from left to right.  When the last line ```result = fiz() + buz()```, the operations proceed in the following order:
+1. The expression on the right side of the assignment is computed first.
+2. The expression is scanned from left to right and any precedence rules are applied.
+3. Binary multiplication has the highest precedence, so the two operands needed for multiplication are evaluated:
+  1. ```buz()``` is the left multiplication operand, so ```buz()``` is called and its return value ```2``` is used as the left operand.
+  2. ```jaz()``` is the right multiplication operand, so ```jaz()``` is called and its return value ```-1``` is used as the right operand.
+  3. Multiplication is performed on the results of the calls to ```buz()``` and ```jaz()``` which produces the single value of ```-2```.
+4. Binary addition has the highest precedence of the remaining operations, so the two operands needed for addition are evaluated:
+  1. ```fiz()``` is the left addition operand, so ```fiz()``` is called and its return value ```3``` is used as the left operand.
+  2. ```-2``` is the right operand which was computed from the previous operation.
+  3. Addition is performed on the result of the call to ```fiz()``` and the previous multiplication which produces the single value of ```1```.
+5. The right side expression contains no more operators to evaluate and has been resolved as a value, so that value is assigned to the left side, ```result = 1```.
+
 > One novel aspect of Python is that functions may return multiple values.  Most languages only allow one value to be returned from a function.
 
 _________
