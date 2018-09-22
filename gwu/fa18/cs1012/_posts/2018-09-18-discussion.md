@@ -413,16 +413,16 @@ Optional parameters are not considered when comparing two function declarations.
 
 ```python
 def baz():
-    print("called bar with no parameters")
+    print("called baz with no parameters")
 
 def baz(p1):
-    print("called bar with one parameter")
+    print("called baz with one parameter")
 
 def baz(p1, p2, p3=0):
-    print("called bar with two + optional parameters")
+    print("called baz with two + optional parameters")
 
 # main program
-baz()     # calls bar with no parameters
-baz(1)    # calls bar with one parameter
-baz(1,2)  # calls bar with two and optional parameters
+baz()     # calls baz with no parameters
+baz(1)    # calls baz with one parameter
+baz(1,2)  # calls baz with two and optional parameters
 ```
