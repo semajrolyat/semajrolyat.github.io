@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Modules"
-date:   2018-08-13 00:00:00 -0400
-schedule:   2018-09-13 00:00:00 -0400
-categories: [preview]
+date:   2018-09-25 00:00:00 -0400
+schedule:   2018-09-25 00:00:00 -0400
+categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "HtTLaCS "
+reading: "HtTLaCS 7.1-7.8"
 exercises: "/gwu/fa18/cs1012/2018/09/25/exercises.html"
 ---
 <head>
