@@ -59,7 +59,7 @@ Run your script and take a screenshot of the output.  Save this screenshot as ``
 Submit ```polyfun.py``` and ```polyfun.png```.
 
 #### Exercise 3 - Inset Squares
-Write a program to draw squares inset into one another.  Save this script as ```insetsquares.py```.
+Write a program to draw ten squares inset into one another.  Save this script as ```insetsquares.py```.
 
 Assume that the length of a side for the innermost square is 20 units and each successive square is 20 units larger than the previous square.  This script should center the squares.  The output of this program should look like the following image.
 
