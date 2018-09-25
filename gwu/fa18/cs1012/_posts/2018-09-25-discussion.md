@@ -7,7 +7,6 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 7.1-7.8"
-exercises: "/gwu/fa18/cs1012/2018/09/25/exercises.html"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
