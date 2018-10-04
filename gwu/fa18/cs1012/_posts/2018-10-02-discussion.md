@@ -172,7 +172,7 @@ if BOOLEAN_EXPRESSION1:
     # This block is only processed if BOOLEAN_EXPRESSION1 is True
     STATEMENTS1
 elif BOOLEAN_EXPRESSION2:
-    # This block is only processed if BOOLEAN_EXPRESSION1 is True
+    # This block is only processed if BOOLEAN_EXPRESSION1 is False and BOOLEAN_EXPRESSION2 is True
     STATEMENTS2
 else:
     # This block is only processed if BOOLEAN_EXPRESSION1 and BOOLEAN_EXPRESSION2 are False
