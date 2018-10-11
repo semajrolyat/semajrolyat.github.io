@@ -16,7 +16,7 @@ reading: "HtTLaCS 2.2-2.3 & 2.8-2.11"
 > Much of what we discuss today will be placed in the context of mathematics.  If we only use mathematics then our programs will be nothing more than glorified calculators; however, we are focuing on mathematics now because it is hopefully a context that we all share.  We will expand beyond mathematical concepts very soon.
 
 ## Literals
-Any time you write a number (or a _string_) into a program, that value is called a _literal_ and is sometimes described as being a value that is _hardcoded_ into the program.  In the above example, we use the literal 100 for the length of a side and the literal 90 for the angle of the turn.
+Any time you write a number (or a _**string**_) into a program, that value is called a _**literal**_ and is sometimes described as being a value that is _**hardcoded**_ into the program.  In the above example, we use the literal 100 for the length of a side and the literal 90 for the angle of the turn.
 > We will define what the term "string" means later.  The term "hardcoded" implies that the value cannot be changed once the program is started.
 
 We can accomplish a lot using literals and they are necessary; however, if we only use literals, it will be difficult to modify the program later to write code that can be reused in different contexts.
@@ -70,7 +70,7 @@ s1 = "Hello there!"      # legal - assign literal string to variable s
 s2 = Hello there!        # illegal - Hello There! is not a legal expression
 ```
 
-> The assignment of ```s1``` in the above code is legal because the value being assigned is inside double quotes ```"Hello there!"```.  A value inside quotes is called a _string_.  We will talk more about strings later.  The assignment of ```s2``` is not legal because the expression to the right of the assignment operator is not a valid expression.
+> The assignment of ```s1``` in the above code is legal because the value being assigned is inside double quotes ```"Hello there!"```.  A value inside quotes is called a _**string**_.  We will talk more about strings later.  The assignment of ```s2``` is not legal because the expression to the right of the assignment operator is not a valid expression.
 
 ## Style
 * Variables should be given meaningful names.  A meaningful name improves the readability of code.
@@ -79,7 +79,7 @@ s2 = Hello there!        # illegal - Hello There! is not a legal expression
 * Comments are are ignored by the Python interpreter and begin with the ```#``` character.
 
 ## Expressions
-In Python we use _infix notation_ to join together _operands_ using _operators_ to form an _expression_.  Infix notation means that binary operators appear between two operands.  Operands are values to be operated on and operators describe the operations to be performed.  An expression may be formed by combining a number of operands and operators and expressions may appear in different contexts.  These are some examples of legal expressions:
+In Python we use _**infix notation**_ to join together _**operands**_ using _**operators**_ to form an _**expression**_.  Infix notation means that binary operators appear between two operands.  Operands are values to be operated on and operators describe the operations to be performed.  An expression may be formed by combining a number of operands and operators and expressions may appear in different contexts.  These are some examples of legal expressions:
 ```python
 x = 3
 y = 0.5 * x + 1

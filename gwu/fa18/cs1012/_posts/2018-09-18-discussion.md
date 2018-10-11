@@ -14,7 +14,7 @@ exercises: "/gwu/fa18/cs1012/2018/09/18/exercises.html"
 </head>
 
 ### Calling a Function
-We have used a number of built in Python functions throughout our work so far which have generally been described as "commands", but the more correct name is _function_.  Functions also sometimes called _methods_.
+We have used a number of built in Python functions throughout our work so far which have generally been described as "commands", but the more correct name is _**function**_.  Functions also sometimes called _**methods**_.
 
 For example, we have called the ```forward``` function from the turtle module to move the turtle forward.  The ```forward``` function accepts one parameter, _i.e._ a value inside the parentheses, that tells the turtle how many units to move forward.  For example, the following code instructs the turtle to move forward 100 units:
 ```python
@@ -31,15 +31,15 @@ def forward(distance):
 ```
 The value we have been providing to the ```forward``` function inside the parentheses is handled inside the ```forward``` function as a variable named ```distance```.
 
-The ```forward``` function _encapsulates_ all of the operations necessary to move the turtle forward which includes all the drawing operations needed to draw on the window.  We do not need to know how the turtle draws, we only need to know how to call ```forward``` in order to move the turtle and draw.  This is known as _information hiding_.
+The ```forward``` function _**encapsulates**_ all of the operations necessary to move the turtle forward which includes all the drawing operations needed to draw on the window.  We do not need to know how the turtle draws, we only need to know how to call ```forward``` in order to move the turtle and draw.  This is known as _**information hiding**_.
 
-> Functions are one means of _encapsulation_ and _information hiding_.  We will talk about this in more detail when we discuss classes and object oriented programming.
+> Functions are one means of _**encapsulation**_ and _**information hiding**_.  We will talk about this in more detail when we discuss classes and object oriented programming.
 
-Functions promote _reusability_ and _generalizability_ which we have established as an important tenet of programming.
+Functions promote _**reusability**_ and _**generalizability**_ which we have established as an important tenet of programming.
 
 _________
 ### Defining our own Functions
-We can define our own Python functions using the function _definition_ structure:
+We can define our own Python functions using the function _**definition**_ structure:
 ```python
 def name(parameters):
     statements
@@ -53,7 +53,7 @@ The definition for a Python function has the following requirements:
 * Everything inside the body of the function must be indented.
 * Inside the parentheses, parameters may be specified.
 
-> The first line of a function definition, from the ```def``` keyword to the colon ```:```, is also known as the function _declaration_.
+> The first line of a function definition, from the ```def``` keyword to the colon ```:```, is also known as the function _**declaration**_.
 
 _________
 ### Functions must be defined before they can be used
@@ -100,7 +100,7 @@ Parameters are treated as variables that are locally defined for a function.
 > There is an upper limit on the number of parameters that you can specify for a function; however, this number is sufficiently large that the actual limitation is irrellevant.  What is more important is that defining a function with too many parameters makes the function more difficult to use and is usually a sign of poor design.  We will discuss how to appropriately manage the number of parameters later in the term.
 
 #### Arguments and Parameters
-The terms _argument_ and _parameter_ have slightly different connotations but are often used interchangably.  The difference is somewhat trivial in terms of the objectives of this course and we will make no real distinction between these terms in this course so you can consider these terms to by synonyms.
+The terms _**argument**_ and _**parameter**_ have slightly different connotations but are often used interchangably.  The difference is somewhat trivial in terms of the objectives of this course and we will make no real distinction between these terms in this course so you can consider these terms to by synonyms.
 
 To clarify the two terms a bit, an "argument" is a value passed to a function from the calling context and a "parameter" is the field that is received in the function.  The distinction arises because parameters are represented locally in the function as variables but the arguments passed to the function may be variable or literal.  However, to make this more confusing, the term "parameter" is used interchangeably in the context of "argument".
 
@@ -202,7 +202,7 @@ Until we look a little deeper at branching, usage of ```return``` in this way wi
 
 _________
 ### Returning data from a function
-Functions can perform computations and _return_ the results of those computations using the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` assigns a value to the function itself which can be used in an expression in the calling context.
+Functions can perform computations and _**return**_ the results of those computations using the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` assigns a value to the function itself which can be used in an expression in the calling context.
 
 For example, in the following function, the value of ```10``` is returned from the function ```bar()``` and ```x``` is assigned the value of ```10``` that was returned from ```bar()```:
 
@@ -254,13 +254,13 @@ Recall that expressions are computed from left to right.  When the last line ```
 
 _________
 ### Scope
-The term _scope_ is used to describe the _visibility_ and _lifespan_ of variables and functions.
+The term _**scope**_ is used to describe the _**visibility**_ and _**lifespan**_ of variables and functions.
 
-A variable is only visible and only lives within the scope that it is defined.  For example, variables that are defined inside a function are only visible and only live inside the body of that function.  This means that variables defined inside a function have _local scope_ and are _local variables_ of that function.  In other words, variables that are defined inside a function have no meaning outside of the function in which they are defined.  Parameters are always _local variables_.
+A variable is only visible and only lives within the scope that it is defined.  For example, variables that are defined inside a function are only visible and only live inside the body of that function.  This means that variables defined inside a function have _**local scope**_ and are _**local variables**_ of that function.  In other words, variables that are defined inside a function have no meaning outside of the function in which they are defined.  Parameters are always _**local variables**_.
 
 Variables that have been used outside a function are generally not visible inside a function.  This is beneficial because we can reuse the same names in different contexts.  Sometimes we do wish to make variables from other contexts available to functions.  We can do this by either making a variable global or by passing a variable to a function as a parameter.
 
-A _global variable_ is a variable that is defined outside the scope of all functions or at _global scope_.  It is possible to access a global variable from inside a function, but it is not advised.
+A _**global variable**_ is a variable that is defined outside the scope of all functions or at _**global scope**_.  It is possible to access a global variable from inside a function, but it is not advised.
 
 ```python
 myglobal = 10     # myglobal has global scope
@@ -396,7 +396,7 @@ The above code produces the following drawing:
 
 _________
 ### Optional Parameters
-Parameters can be specified to be optional by providing a _default value_.  The default value is specified by assigning a value to the parameter in the function declaration.  An optional parameter may be omitted when calling the function.  If an optional parameter is omitted, the parameter will be set to the default value. Optional parameters must appear at the end the parameter declarations.
+Parameters can be specified to be optional by providing a _**default value**_.  The default value is specified by assigning a value to the parameter in the function declaration.  An optional parameter may be omitted when calling the function.  If an optional parameter is omitted, the parameter will be set to the default value. Optional parameters must appear at the end the parameter declarations.
 
 ```python
 def opts(p1, p2, p3=0):
@@ -408,10 +408,9 @@ opts(1,2,3)    # calls with the values (p1=1, p2=2, p3=3)
 ```
 _________
 ### Functions with the same name
+In some languages, it is legal for more than one function to have the same name; however, in Python, *two functions cannot have the same name*.  In Python, each function must have a unique name.
 
-Two functions can have the same name but they must have a different number of parameters.
-Optional parameters are not considered when comparing two function declarations.
-
+The following code would generate an redefinition error:
 ```python
 def baz():
     print("called baz with no parameters")
@@ -419,11 +418,7 @@ def baz():
 def baz(p1):
     print("called baz with one parameter")
 
-def baz(p1, p2, p3=0):
-    print("called baz with two + optional parameters")
-
 # main program
 baz()     # calls baz with no parameters
 baz(1)    # calls baz with one parameter
-baz(1,2)  # calls baz with two and optional parameters
 ```

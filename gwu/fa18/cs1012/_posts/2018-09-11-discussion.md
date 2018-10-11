@@ -29,9 +29,9 @@ forward(x)
 
 There is a clear pattern in this code and we would like to reduce it if possible.
 
-Programmers generally seek to reduce the overall amount of code.  We do this to limit the possiblity of introducing bugs and to generalize code wherever possible. Less code promotes _reliability_ and generalization promotes _reusabiltiy_.
+Programmers generally seek to reduce the overall amount of code.  We do this to limit the possiblity of introducing bugs and to generalize code wherever possible. Less code promotes _**reliability**_ and generalization promotes _**reusabiltiy**_.
 
-Programming languages provide structures that allow code to loop or _iterate_ over one or more statements so that those actions can be performed a number of times.  Python has multiple ways to loop; however, the most widely used and fundamental type of loop is called a ```for``` loop.
+Programming languages provide structures that allow code to loop or _**iterate**_ over one or more statements so that those actions can be performed a number of times.  Python has multiple ways to loop; however, the most widely used and fundamental type of loop is called a ```for``` loop.
 
 > As a rule of thumb, you will probably write 100 ```for``` loops for any other type of loop you might consider.
 
@@ -43,17 +43,17 @@ for student in ["Elise", "Charlie", "Bob", "Alice", "David"]:
 
 The Python ```for``` loop operates on a list.  In the above example:
 * The list is specified by the strings inside the square brackets, _i.e._ ```[``` and ```]```, so the list contains the strings ```["Elise", "Charlie", "Bob", "Alice", "David"]```.
-* The variable ```student``` is called the _loop variable_ and contains the name from the list that is currently being operated on.  Each item in the list will be assigned to the loop variable once in the order that they appear from left to right.
+* The variable ```student``` is called the _**loop variable**_ and contains the name from the list that is currently being operated on.  Each item in the list will be assigned to the loop variable once in the order that they appear from left to right.
 * To make it more clear, it might help you to read the loop statement as "for each student in the list".
 * The line where the loop is defined must end in a colon ```:```
 * Everything inside the body of the loop --- beginning at the ```print``` statement --- must be indented.  **Indentation is important in Python**.
 * When the bottom of the loop body is reached, the interpreter will jump back up to the ```for``` statement and assign the next item in the list to loop variable.
-* The _terminating condition_ for a loop determines when the loop ends.  In a ```for``` loop, the terminating condition occurs when the end of the list is reached.
+* The _**terminating condition**_ for a loop determines when the loop ends.  In a ```for``` loop, the terminating condition occurs when the end of the list is reached.
 * When the terminating condition is reached, the loop terminates and the loop body is bypassed and the interpreter jumps to the next statement following the loop body.
 
 
 ### Control Flow
-Without special instructions, the Python interpreter will process a script line-by-line from top to bottom, or _sequential_.  Certain keywords allow a programmer to change this behavior and control the _flow of execution_  --- the terms _control flow_ and _branching_ are synonyms for "flow of execution".  Through control flow, we can jump back up to an earlier statement or choose to optionally process statements.  We will talk more about other ways to control the flow of execution soon, but for now, we will focus on the ```for``` loop.
+Without special instructions, the Python interpreter will process a script line-by-line from top to bottom, or _**sequential**_.  Certain keywords allow a programmer to change this behavior and control the _**flow of execution**_  --- the terms _**control flow**_ and _**branching**_ are synonyms for "flow of execution".  Through control flow, we can jump back up to an earlier statement or choose to optionally process statements.  We will talk more about other ways to control the flow of execution soon, but for now, we will focus on the ```for``` loop.
 
 The following flow chart summarizes the flow control for the ```for``` loop:
 
@@ -67,7 +67,7 @@ for i in [0,1,2,3]:
     # Do some opertions based on i
 ```
 
-For loops over a list of integers, ```i``` is a very common name for a loop variable and ```i``` is often referred to as the _index_.  This convention is borrowed from [Sigma notation](https://en.wikipedia.org/wiki/Summation).
+For loops over a list of integers, ```i``` is a very common name for a loop variable and ```i``` is often referred to as the _**index**_.  This convention is borrowed from [Sigma notation](https://en.wikipedia.org/wiki/Summation).
 
 The ```0``` appearing at the beginning of the list above is very normal in computer science; however, the explanation for why computer scientists count from zero is beyond the scope of our discussion at the moment.  One point of confusion that often arises is the first element in the list corresponds to the ```0``` index.
 

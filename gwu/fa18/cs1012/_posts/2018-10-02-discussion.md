@@ -150,6 +150,9 @@ In the above ```if``` statement, the body of the ```if``` statement is only eval
 
 > The book refers to this as a "unary conditional"
 
+The following flow chart models the ```if``` conditional structure:
+![If Flowchart]({{ "/gwu/fa18/cs1012/assets/10_02_2018/if.png" | absolute_url }})
+
 #### "if-else" Conditional
 
 The ```if``` statement may also be accompanied by an ```else``` block to form an "if-else" conditional structure.  Statements in the ```else``` block are only evaluated if the ```BOOLEAN_EXPRESSION``` in the ```if``` statement is evaluated to ```False```.  An "if-else" conditional has the following structure:
@@ -164,6 +167,9 @@ else:
 Note that the ```else``` block follows the same conventions as the ```if``` block.
 
 > The book refers to this as a "binary conditional"
+
+The following flow chart models the ```if-else``` conditional structure:
+![If-Else Flowchart]({{ "/gwu/fa18/cs1012/assets/10_02_2018/if_else.png" | absolute_url }})
 
 #### "if-else if-else" Conditional
 A conditional ```if``` can also be followed by a number of "else if" statements that are indicated by the ```elif``` keyword to form an "if-else if-else" conditional structure.  An ```elif``` is both an ```else``` and an ```if``` conditional, so the ```elif``` must be followed by a boolean expression that controls whether the ```elif``` block is processed.  An "if-else if-else" conditional has the following structure:
@@ -182,6 +188,9 @@ Only one of the branches will be exectuted, _i.e._ the first branch where the co
 
 > The book refers to this as a "chained conditional"
 
+The following flow chart models the ```if-elif-else``` conditional structure:
+![If-Elif-Else Flowchart]({{ "/gwu/fa18/cs1012/assets/10_02_2018/if_elif_else.png" | absolute_url }})
+
 ### Nested Conditionals
 ```python
 if BOOLEAN_EXPRESSION:
@@ -191,6 +200,9 @@ if BOOLEAN_EXPRESSION:
         # This block or branch is only processed if NESTED_BOOLEAN_EXPRESSION is True
         NESTED_STATEMENTS
 ```
+
+The following flow chart models the nested ```if``` conditional structure:
+![Nested If Flowchart]({{ "/gwu/fa18/cs1012/assets/10_02_2018/nested_if.png" | absolute_url }})
 
 ### Boolean Functions
 Functions can return a boolean value.  Suppose that we are writing a program that regularly checks whether a value is odd or not.  We can write a function that explicitly checks the condition and returns the corresponding truth value.  For example, the following function ```isOdd(x)``` returns ```False``` if the parameter ```x``` is even and returns ```True``` if ```x``` is odd:

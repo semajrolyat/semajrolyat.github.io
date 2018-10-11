@@ -14,7 +14,7 @@ exercises: "/gwu/fa18/cs1012/2018/09/06/exercises.html"
 </head>
 
 ## Types
-In our previous discussions, we have established that values whether literals or variables have a _type_ (shorthand for _data type_).  In Python, every value is treated as an _object_.  We will discuss objects more in depth later.
+In our previous discussions, we have established that values whether literals or variables have a _**type**_ (shorthand for _**data type**_).  In Python, every value is treated as an _**object**_.  We will discuss objects more in depth later.
 
 In the previous class, we established that operations produce output that conforms to types that are determined by the operation and/or the operands used in the operation.  In many other languages, data types are a critical concern and the programmer must explicitly specify the type of each variable.  In Python, data type is still an important concern but it is generally handled behind the scenes.  As a result, a Python programmer does not have to be as concerned with types as a programmer in one of these other languages, but a Python programmer still must be aware of the issues involved with types.
 
@@ -30,7 +30,7 @@ In Python, the keyword ```float``` is used to specify a floating-point type.  Th
 > The error in floating point calculations is typically very small, but it exists.  For the most part, this error is so small that you can dismiss it; however, there are some applications that use floating point numbers where we have to design the code to accommodate the possiblity of error or to correct the error that may accrue over a large number of calculations.  For now, just be aware that when dealing with floating point, there is inherent inaccuracy.
 
 #### String
-Programmers use the term _string_ to describe data that contains a sequence of characters.  In Python, any characters enclosed between single quotes, double quotes, or a set of triple quotes (double or single) will be interpreted as string.  For example, each of the following statements is interpreted in Python as a string:
+Programmers use the term _**string**_ to describe data that contains a sequence of characters.  In Python, any characters enclosed between single quotes, double quotes, or a set of triple quotes (double or single) will be interpreted as string.  For example, each of the following statements is interpreted in Python as a string:
 ```python
 "Hello World"
 'Hello World'
