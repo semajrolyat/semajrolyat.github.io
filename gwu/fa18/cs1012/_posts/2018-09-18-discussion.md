@@ -410,7 +410,7 @@ _________
 ### Functions with the same name
 In some languages, it is legal for more than one function to have the same name; however, in Python, *two functions cannot have the same name*.  In Python, each function must have a unique name.
 
-The following code would generate an redefinition error:
+The following code would generate a redefinition error:
 ```python
 def baz():
     print("called baz with no parameters")
