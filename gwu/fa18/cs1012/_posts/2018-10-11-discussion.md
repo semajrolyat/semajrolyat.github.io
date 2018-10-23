@@ -6,6 +6,9 @@ schedule:   2018-10-11 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
+reading: "HtTLaCS 9.1-9.14 (and 9.15-9.19)"
+exercises: "/gwu/fa18/cs1012/2018/10/11/exercises.html"
+
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
@@ -22,15 +25,19 @@ while BOOLEAN_EXPRESSION:
     STATEMENTS
 ```
 
+The following flow chart models the ```while``` control structure:
+![While Flowchart]({{ "/gwu/fa18/cs1012/assets/10_11_2018/while.png" | absolute_url }})
+
+
 If ```BOOLEAN_EXPRESSION``` evaluates as ```True```, then ```STATEMENTS``` will be executed.  Once the end of the loop body is reached, the process will go back up to the ```while``` statement and reevaluate ```BOOLEAN_EXPRESSION```.  If ```BOOLEAN_EXPRESSION``` is reevaluated as ```True``` the loop body will be processed again.  This behavior will repeat until some case inside ```STATEMENTS``` changes the state of the system such that ```BOOLEAN_EXPRESSION``` is evaluated as ```False```.  However, ```BOOLEAN_EXPRESSION``` will only be reevaluated when the process reaches the end of all statements inside the loop body.  For example, the following ```while``` loop will loop until ```x > 1000```:
 
 ```python
 x = 1
-while x > 1000:
+while x < 1000:
   x = x * 2
 ```
 
-A ```while``` loop can iterate an infinite number of times, meaning that the loop will never terminate.  While it is possible, it is generally difficult to inadvertantly create an infinite ```for``` loop.  A programmer must be very careful and make sure that the logic that controls a terminating condition is correctly implemented when working with a ```while``` loop.
+A ```while``` loop can iterate an infinite number of times which is often called an _**inifinte loop**_, meaning that the loop will never terminate.  While it is possible, it is generally difficult to inadvertantly create an infinite ```for``` loop.  A programmer must be very careful and make sure that the logic that controls a terminating condition is correctly implemented when working with a ```while``` loop.
 
 ### ```for``` Is a ```while``` Loop
 We can easily model the ```for``` loop using a ```while``` loop, and in actuality, a ```for``` loop is really a ```while``` loop underneath the hood.  Consider the following ```while``` loop example:
@@ -48,7 +55,7 @@ for i in range(10):
 ```
 The ```for``` structure was introduced because most of the loops we create iterate over a finite range.  The ```for``` structure neatly encapsulates all of the logic necessary to achieve these types of loops and eliminates the possibility of a programmer forgetting a critical component like incrementing the loop variable ```i```.
 
-> You will likely write 100 ```for``` loops for every ```while``` loop you might write, so most iterative problems will likely involve writing a ```for``` loop.  However, the ```while``` loop is capable of evaluating general conditional logic so it is more flexible and is more likely to be used if the number of iterations is indefinite.
+> You will likely write 100 ```for``` loops for every ```while``` loop you might write, so most iterative problems will likely involve writing a ```for``` loop.  However, the ```while``` loop is capable of evaluating general conditional logic so it is more flexible and is more likely to be used if the number of iterations is indefinite.  Many problems deal with gathering an indefinite amount of data; however, once we have gathered the data, we generally know how many iterations are necessary.  The book has a contradictory stance and suggests that ```while``` loops are quite common.
 
 ### Nested Loops
 Just like we could nest ```if``` statements and we can call a function from inside another function, we can also nest loops within one another.  For example, we can nest a ```for``` loop inside another ```for``` loop:

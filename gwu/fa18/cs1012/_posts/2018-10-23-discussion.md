@@ -3,11 +3,9 @@ layout: post
 title:  "Strings"
 date:   2018-10-23 00:00:00 -0400
 schedule:   2018-10-23 00:00:00 -0400
-categories: [preview]
+categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "HtTLaCS 9.1-9.14 (and 9.15-9.19)"
-exercises: "/gwu/fa18/cs1012/2018/10/23/exercises.html"
 
 ---
 <head>
