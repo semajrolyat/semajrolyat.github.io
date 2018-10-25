@@ -70,9 +70,9 @@ for i in range(x):
 We can nest ```while``` loops:
 ```python
 i = 0
-j = 0
 while(i < x):
   I_STATEMENTS1
+  j = 0
   while(j < y):
     J_STATEMENTS
     j = j + 1
