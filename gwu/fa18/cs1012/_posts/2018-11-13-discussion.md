@@ -6,6 +6,7 @@ schedule:   2018-11-13 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
+exercises: "/gwu/fa18/cs1012/2018/11/13/exercises.html"
 ---
 
 Python has a broad array of applications, but the most widely used area of Python use involves data manipulation and analysis.
@@ -350,12 +351,181 @@ The above program computes the l2 norm of a vector and then normalizes that vect
 
 > What is the l2 norm?  Draw a right triangle with sides of the length provided in ```a```.  You will see that the value stored in ```l2``` is the length of the hypoteneuse.  The final step of normalizing ```a``` by dividing it by ```l2``` gives the length of the sides of that triangle when projected onto the unit circle.
 
-### Other ```numpy``` Mathematical Functions
+## Built in ```ndarray``` functions a.k.a. methods
+We have not focused on classes in this course.  If there is time at the end of the term, we will.  However, the term _**method**_ is used to describe a function that is attached to an object.  We access a method using the dot operator in the exact same way that we access functions for ```numpy```.  We won't focus too much on the diffences between accessing a module function and a class function right not and we will instead assume that they are generally the same.
+
+For example, the following code uses the dot operator ```.``` between the ```np``` module name and the call to the ```array``` function:
+```python
+import numpy as np
+a = np.array([3,4])
+```
+A call to method looks exactly the same.  For example, we can call the transpose method for an ```ndarray``` using the following code:
+
+```python
+import numpy as np
+a = np.arange(10)
+b = a.transpose()
+```
+
+When a method is called, it typically operates on the data stored in the object that called it (whatever object preceeds the dot operator).  In the above example, the data in ```a``` is transposed and the result is stored in ```b```.
+
+### Transposing a numpy array
+Transpose is a term that is borrowed from linear algebra which means to flip a matrix across the diagonal.  For more information on the transpose operation, look at the [Transpose Wikipedia article](https://en.wikipedia.org/wiki/Transpose).  The practical application of transpose is to convert rows to columns and columns to rows without otherwise changing the structure or contents of an array.  In order to carry out an operation, we may need to change an array from row major format to column major format meaning we may need to swap rows to columns and vice versa.
+
+```Python
+import numpy as np
+
+a = np.arange(10)        # arange produces a 1 dimensional array
+a = a.reshape((2,5))     # reshape a into a 2 dimensional array
+b = a.transpose()        # transpose a into a 5x2 array
+print(b)
+```
+The output from the above is as follows:
+```
+[[0 5]
+ [1 6]
+ [2 7]
+ [3 8]
+ [4 9]]
+```
+On the surface, it may appear that we could achieve the same result by reshaping the array; however, this is not often the case.  For example, the following code attempts to reshape the array to produce the same structure as the above code:
+```Python
+import numpy as np
+
+a = np.arange(10)        # arange produces a 1 dimensional array
+a = a.reshape((2,5))     # reshape a into a 2 dimensional array
+b = a.reshape((5,2))     # attempt to reshape into a 5x2 array
+print(b)
+```
+The above code produces the following output:
+```
+[[0 1]
+ [2 3]
+ [4 5]
+ [6 7]
+ [8 9]]
+```
+Note how the second output differs from the first.  Make sure that you are using the correct method for your intent.
+
+Transpose is often the better choice instead of reshape as we do not need to explicitly know the dimensions of the array to use ```transpose``` while we do when we use ```reshape```.
+
+The ```T``` property of an ```ndarray``` already holds the transpose and produces the same result as calling the ```transpose()``` function.
+```Python
+import numpy as np
+
+a = np.arange(10)        # arange produces a 1 dimensional array
+a = a.reshape((2,5))     # reshape a into a 2 dimensional array
+b = a.T                  # transpose a into a 5x2 array
+print(b)
+```
+
+### Find the minimum or maximum value in a ```numpy``` array
+We can ask a ```numpy``` array to return its minimum and maximum values by calling the ```min``` and ```max``` methods respectively.
+
+For example, the following code generates a 3x3 array within the range [0,8] and then copies the minimum value and the maximum value into ```Amin``` and ```Amax```:
+
+```python
+import numpy as np
+A = np.arange(9)
+A = A.reshape((3,3))
+Amin, Amax = A.min(), A.max()
+print(Amin, Amax)
+```
+The above code produces the following output:
+```
+0 8
+```
+You should see that the first value printed in the output reflects the minimum value in the array and the second value in the output reflects the maximum value in the array.
+
+### Find the mean value in a ```numpy``` array
+We can ask a ```numpy``` array to return the mean (average) of all values by calling the ```mean``` method.
+
+For example, the following code generates a 3x3 array within the range [0,8] and then asks the array for the mean of all values in the array:
+```Python
+import numpy as np
+A = np.arange(9)
+A = A.reshape((3,3))
+print(A)
+print(A.mean())
+```
+The above code produces the following output:
+```
+[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+4.0
+```
+The value ```4.0``` is the average of all values in the array.
+
+Because a slice is itself an array, we can slice the array and ask the slice for its own mean:
+```Python
+import numpy as np
+A = np.arange(9)
+A = A.reshape((3,3))
+print(A)
+print(A[:,2].mean())
+```
+The above code produces the following output:
+```
+[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+5.0
+```
+In the above example, we sliced the last column from ```A``` and then computed the mean for that column.  You should see that ```5.0``` is the average of all values in the last column.
+
+## Other ```numpy``` Mathematical Functions
 There a broad variety of [mathematical](https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.math.html), [linear algebra](https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.linalg.html), and [randomization](https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.random.html) functions in ```numpy```.  Some of these functions are also implemented in the Python ```math``` module or in the core of Python; however, the ```numpy``` based functions are explicitly designed to operate on ```ndarray```'s very efficiently.  In many cases, we can use these functions on an entire ```ndarray``` in a single operation without the need to iterate.
 
-We cannot cover all functions in ```numpy```, so you should consult the [```numpy``` mathematical function reference page](https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.math.html) before attempting to use a more basic technique that requires you to iterate over an ```ndarray```.  The following section details using the ```diff``` function which should help you generally understand how you can use the ```numpy``` mathematical functions without iteration.
+We cannot cover all functions in ```numpy```, so you should consult the [```numpy``` mathematical function reference page](https://docs.scipy.org/doc/numpy-1.15.0/reference/routines.math.html) before attempting to use a more basic technique that requires you to iterate over an ```ndarray```.  The following section details using some typically used functions which should help you generally understand how you can use the ```numpy``` mathematical functions without iteration.
 
-#### Computing a Difference using [```numpy.diff```](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.diff.html)
+Many of these functions are intended to work on vectors only.  A one dimensional array is also known as a _**vector**_.
+
+### Computing the Median using [```numpy.median```](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.median.html)
+
+We may need to find the middle (median) value in a row or column in an array.  In order to do this, we can use the ```median``` function.  The median function has the following declaration:
+```Python
+numpy.median(a, axis=None, out=None, overwrite_input=False, keepdims=False)
+```
+We can use median without any of the optional parameters if we pass a row or column as the argument ```a```.  For example, the following code generates a simple matrix and uses slicing to retrieve the median of the first row and the first column:
+
+```python
+import numpy as np
+A = np.arange(9)
+A = A.reshape((3,3))
+print(A)
+print(np.median(A[0,:]))   # get the median of the first row
+print(np.median(A[:,0]))   # get the median of the first column
+```
+The above code produces the following output:
+```
+[[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+1.0
+3.0
+```
+
+### Computing the standard deviation using [```numpy.std```](https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.std.html)
+
+For statistical analysis, we may need to find the standard deviation for a set of data.  ```numpy``` provides the ```std``` function to compute the standard deviation on an array.  The declaration for ```std``` is as follows:
+
+```Python
+numpy.std(a, axis=None, dtype=None, out=None, ddof=0, keepdims=<no value>)
+```
+The ```std``` function computes the standard deviation on the distribution of values in the array.  In many cases, we wish to compute the standard deviation for a row or column.  We can slice the array (rows or columns) and pass the slice to the ```std``` function so that we can compute the standard deviation on a subset of the original array.  For example, the following computes the standard deviation for the first column in the array:
+```python
+import numpy as np
+A = np.arange(100)
+A = A.reshape((10,10))
+print(np.std(A[0,:]))
+```
+The above code produces the following output:
+```
+2.8722813232690143
+```
+
+### Computing a Difference using [```numpy.diff```](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.diff.html)
 
 We may need to compute the change between two samples.  We could accomplish this by iterating over an ```ndarray``` and computing the difference between each neighboring record; however, ```numpy``` provides a built in function that performs this calculation in one statement and is highly flexible, _i.e._ ```diff```.  For example, if we wish to compute the difference along the first column of an ```ndarray```, we can use the following approach:
 
