@@ -615,7 +615,7 @@ The above declaration has a significant number of parameters; however, for files
 For example, if the file we wish to load is located in the same directory as the python script and the file is name ```data.txt```, we can load it into an array ```a``` using the following code:
 ```Python
 import numpy as np
-a = loadtxt('data.txt')
+a = np.loadtxt('data.txt')
 ```
 
 ### ```numpy.savetxt```
