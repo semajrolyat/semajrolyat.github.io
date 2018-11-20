@@ -3,15 +3,15 @@ layout: post
 title:  "Introduction to Plotting"
 date:   2018-11-20 00:00:00 -0400
 schedule:   2018-11-20 00:00:00 -0400
-categories: [preview]
+categories: [gwu]
 docclass: "discussion"
 gwclass: "cs1012"
 ---
 
 ## Using ```matplotlib```
+This is a very simple introduction to ```matplotlib```.  There are many features that cannot be touched on here.  It will give you a general introduction to using the module, but there is a much deeper layer to the module that we unfortunately do not have time to discuss.  I hope this introduction will inspire you to explore the module more and more as you find more applications for it.
 
-[PyPlot](https://matplotlib.org/api/pyplot_summary.html)
-[Plot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html)
+We will focus in the [PyPlot](https://matplotlib.org/api/pyplot_summary.html) module in ```matplotlib```.  This module primarily focuses on the [```plot```](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html) function; however, there are a large number of other plotting functions that can generate a variety of other types of plots.
 
 ```pyplot.plot``` is very flexible.  It can operate on a single vector or on a set of vectors.  If one vector is provided then the x and y dimensions will be drawn from the input vector.  For example, the following plot represents a line plot where ```x=y```
 
@@ -24,7 +24,6 @@ plt.plot(np.arange(10))
 
 ![Line Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/line01.png" | absolute_url }})
 
-
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -36,6 +35,10 @@ plt.plot(x, y)
 ![Line Plot 2]({{"/gwu/fa18/cs1012/assets/11_20_2018/line02.png" | absolute_url }})
 
 ### Viewing the Plot
+If we wish to view the plot, we can call the ```pyplot.show``` function which will display the plot in a special viewing window.
+
+> In spyder, the plot is displayed in the console, so it is not necessary to call ```show```; however, if you run your scripts at the console, you may wish to use ```show```.
+
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -68,9 +71,11 @@ plt.plot(np.arange(10))
 plt.savefig("test.png", dpi=200)
 ```
 
-For more information on ```savefig``` refer to the [matplotlib ```safefig``` reference page](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html)
+For more information on ```savefig``` refer to the [matplotlib ```savefig``` reference page](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html)
 
 #### Labeling the Plot
+We can label a plot by calling the ```xlabel```, ```ylabel```, and ```title``` functions.
+
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -83,9 +88,13 @@ plt.ylabel('y-axis')
 plt.title('Example plot')
 ```
 
+> You may need to manipulate font properties such as type and size.  These require more advanced interaction with ```pyplot``` than is described here; however, there are extensive number of operations that allow you to fully customize the image that is generated.
+
 ![Labeled Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/label.png" | absolute_url }})
 
 #### Plotting multiple lines
+A single call to ```plot``` will plot a line; however, there is no limit to the number of times that ```plot``` can be called.  For each call to ```plot```, ```pyplot``` will generate a new line.  This way we can represent muliple data sets and compare the two.  For example, the following illustrates generating two lines:
+
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -96,11 +105,13 @@ y2 = x * 4
 plt.plot(x, y1)
 plt.plot(x, y2)
 ```
-The system has automatically selected a color for each plot.
+Note that the system has automatically selected a color for each plot.
 
 ![Multiline Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/multiline.png" | absolute_url }})
 
 ### Plotting columns
+If our data is stored in a multidimensional ```numpy``` array, we can pass individual columns into each call to ```plot```.  For example, the following code generates a ```numpy``` array where the first column represents time, the second column represents data from a first experimental trial, and the third column represents data from a second experimental trial:
+
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -116,6 +127,8 @@ plt.plot(data[:,0],data[:,1])
 # plot exp2 w.r.t time
 plt.plot(data[:,0],data[:,2])
 ```
+
+The primary restriction with a plot is that the length of the ```x``` vector and the accompanying ```y``` vector must have the same length.  In the above example, the array has 100 records, so the length of the ```x``` vector is the same as the lengths of the second and third columns.
 
 ![numpy Columns Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/columns.png" | absolute_url }})
 
@@ -198,6 +211,8 @@ plt.plot(x, marker='o')
 For a comprehensive list of the legal marker arguments refer to the [matplotlib Markers reference](https://matplotlib.org/api/markers_api.html).
 
 ### Scatter Plot Example
+As suggested above, ```pyplot``` has a number of other plotting features.  We can generate a scatter plot using the ```scatter``` function.  For example, the following code generates a scatter plot using data generated from ```numpy.random```:
+
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -222,6 +237,8 @@ plt.plot(x,y,marker='o',linewidth=0)
 ![Scatter Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/scatter02.png" | absolute_url }})
 
 ### Histogram Example
+Another useful plotting function in ```pyplot``` is the histogram using the ```hist``` function.  The following code uses the normal distribution function from ```numpy.random``` to produce a normal distribution and then plots a histogram of the distribution using the ```hist``` function:
+
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -237,7 +254,7 @@ plt.hist(s)
 There are large number of statistical, probability, and signal processing functions in the ```scipy``` library.  You may need to explicitly install ```scipy``` through Anaconda to gain access to these features.
 
 ### Generating data from math functions
-
+We may wish to compare data from an experimental set with an analytical solution.  The following example demonstrates how to plot the ```sin``` function by sampling ```sin``` using evenly spaced inputs:
 
 ```Python
 import matplotlib.pyplot as plt
@@ -249,6 +266,8 @@ y = np.sin(x)
 plt.plot(x,y)
 ```
 ![Math Functions]({{"/gwu/fa18/cs1012/assets/11_20_2018/math01.png" | absolute_url }})
+
+We can generate a number of plots for different analytical problems using the same technique and plotting each of the computed data sets.  For example, the following code plots the ```sin``` and ```cos``` functions over the interval ```[0,2pi]```:
 
 ```Python
 import matplotlib.pyplot as plt
@@ -301,5 +320,3 @@ plt.legend(loc=1)     # draw the legend in the top right corner
 ![Legend Top Right]({{"/gwu/fa18/cs1012/assets/11_20_2018/legend02.png" | absolute_url }})
 
 For detailed information on using ```legend```, refer to the [matplotlib ```legend``` reference page](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html).
-
-### Working with axes
