@@ -45,7 +45,8 @@ plt.plot(np.arange(10))
 plt.show()
 ```
 
-### Saving the Plot
+### Saving the Figure
+We can automatically save the figure generated using the ```savefig``` function.  You must provide a filename when calling ```savefig``` and the image that is produced will be saved by default into the folder in which the script was run.  The following example generates a simple plot and then saves the figure as ```test.png```:
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -54,6 +55,18 @@ plt.plot(np.arange(10))
 
 plt.savefig("test.png")
 ```
+The format of the file is determined by the extension provided in the filename.  In general, the ```png``` file format will produce high quality images that are still small.
+
+```savefig``` may take a number of arguments.  One of these arguments, ```dpi```, is useful if we need to increase the resolution and therefore the quality of the image that is produced.  ```dpi``` is short for dots-per-square-inch and it requires a numeric value.  For example, the following code generates a plot and then saves the figure with a ```200``` ```dpi```:
+```Python
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.plot(np.arange(10))
+
+plt.savefig("test.png", dpi=200)
+```
+For more information on ```savefig``` refer to the [matplotlib ```safefig``` reference page](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html)
 
 #### Labeling the Plot
 ```Python
@@ -200,11 +213,6 @@ plt.hist(s)
 
 There are large number of statistical, probability, and signal processing functions in the ```scipy``` library.  You may need to explicitly install ```scipy``` through Anaconda to gain access to these features.
 
-### Working with axes
-
-### Adding a legend
-
-
 ### Generating data from math functions
 
 
@@ -229,3 +237,43 @@ c = np.cos(x)
 plt.plot(x,s)
 plt.plot(x,c)
 ```
+
+### Adding a legend
+You may wish to generate a legend for your plot.  You may do this by passing a ```label``` argument when plotting a line and then calling the ```legend``` function to generate the legend.
+
+```Python
+import matplotlib.pyplot as plt
+import numpy as np
+# generate some sample data
+x = np.arange(0, 2*math.pi, 0.1)
+s = np.sin(x)
+c = np.cos(x)
+# plot the data
+plt.plot(x,s, label='sin(x)')  # assign the legend label
+plt.plot(x,c, label='cos(x)')  # assign the legend label
+# add a legend
+plt.legend()
+```
+![Legend]({{"/gwu/fa18/cs1012/assets/11_20_2018/legend01.png" | absolute_url }})
+
+By default, ```legend``` attempts to place the legend in the 'best' location, a location that does not mask anything that was drawn.  If you wish to force the location, you can pass the ```loc``` argument with a numeric value to the call to ```legend```.  Refer to the [documentation](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html) for more information on location parameters.  The following example passes ```1``` as the location argument which draws the legend in the top right corner:
+
+```Python
+import matplotlib.pyplot as plt
+import numpy as np
+# generate some sample data
+x = np.arange(0, 2*math.pi, 0.1)
+s = np.sin(x)
+c = np.cos(x)
+# plot the data
+plt.plot(x,s, label='sin(x)')
+plt.plot(x,c, label='cos(x)')
+# add a legend
+plt.legend(loc=1)     # draw the legend in the top right corner
+```
+
+![Legend Top Right]({{"/gwu/fa18/cs1012/assets/11_20_2018/legend02.png" | absolute_url }})
+
+For detailed information on using ```legend```, refer to the [matplotlib ```legend``` reference page](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html).
+
+### Working with axes
