@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to Plotting"
 date:   2018-11-20 00:00:00 -0400
 schedule:   2018-11-20 00:00:00 -0400
-categories: [gwu]
+categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 ---
