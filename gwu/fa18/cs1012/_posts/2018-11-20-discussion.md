@@ -55,6 +55,7 @@ plt.plot(np.arange(10))
 
 plt.savefig("test.png")
 ```
+
 The format of the file is determined by the extension provided in the filename.  In general, the ```png``` file format will produce high quality images that are still small.
 
 ```savefig``` may take a number of arguments.  One of these arguments, ```dpi```, is useful if we need to increase the resolution and therefore the quality of the image that is produced.  ```dpi``` is short for dots-per-square-inch and it requires a numeric value.  For example, the following code generates a plot and then saves the figure with a ```200``` ```dpi```:
@@ -66,6 +67,7 @@ plt.plot(np.arange(10))
 
 plt.savefig("test.png", dpi=200)
 ```
+
 For more information on ```savefig``` refer to the [matplotlib ```safefig``` reference page](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html)
 
 #### Labeling the Plot
@@ -80,6 +82,7 @@ plt.xlabel('x-axis')
 plt.ylabel('y-axis')
 plt.title('Example plot')
 ```
+
 ![Labeled Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/label.png" | absolute_url }})
 
 #### Plotting multiple lines
@@ -94,6 +97,8 @@ plt.plot(x, y1)
 plt.plot(x, y2)
 ```
 The system has automatically selected a color for each plot.
+
+![Multiline Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/multiline.png" | absolute_url }})
 
 ### Plotting columns
 ```Python
@@ -111,6 +116,9 @@ plt.plot(data[:,0],data[:,1])
 # plot exp2 w.r.t time
 plt.plot(data[:,0],data[:,2])
 ```
+
+![numpy Columns Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/columns.png" | absolute_url }})
+
 ### Designating color
 There are a variety of ways to specify color.  The simplest way is to pass one of the legal abbreviations to the ```color``` argument.  The legal abbreviations are:
 * 'r' for red
@@ -130,6 +138,9 @@ import numpy as np
 x = np.arange(10)
 plt.plot(x, color='r')
 ```
+
+![Colors]({{"/gwu/fa18/cs1012/assets/11_20_2018/colors.png" | absolute_url }})
+
 The color argument accepts a wide variety of color specifications which allows you to customize the color to your needs; however, understanding many of these specifications requires a discussion that is beyond the scope of this class.  For a comprehensive list of the legal color arguments refer to the [matplotlib Color reference](https://matplotlib.org/api/colors_api.html).
 
 ### Linewidth
@@ -143,12 +154,15 @@ x = np.arange(10)
 plt.plot(x, linewidth=8)
 ```
 
+![Linewidth]({{"/gwu/fa18/cs1012/assets/11_20_2018/linewidth.png" | absolute_url }})
+
 ### Linestyles
 There are a variety line styles available in ```matplotlib```.  The linestyle is specified through the ```linestyle``` argument with one of the following values:
 * '-' specifies a solid line
 * '--' specifies a dashed line
 * '-.' specifies an alternating dash-dot line
 * ':' specifies a dotted line
+
 ```Python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -156,6 +170,9 @@ import numpy as np
 x = np.arange(10)
 plt.plot(x, linestyle='--')
 ```
+
+![Linestyle]({{"/gwu/fa18/cs1012/assets/11_20_2018/linestyle.png" | absolute_url }})
+
 
 For a comprehensive list of the legal marker arguments refer to the [matplotlib Linestyle reference](https://matplotlib.org/gallery/lines_bars_and_markers/line_styles_reference.html)
 
@@ -176,6 +193,8 @@ x = np.arange(10)
 plt.plot(x, marker='o')
 ```
 
+![Markers]({{"/gwu/fa18/cs1012/assets/11_20_2018/markers.png" | absolute_url }})
+
 For a comprehensive list of the legal marker arguments refer to the [matplotlib Markers reference](https://matplotlib.org/api/markers_api.html).
 
 ### Scatter Plot Example
@@ -188,6 +207,7 @@ y = np.random.random(100)
 
 plt.scatter(x,y)
 ```
+![Scatter Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/scatter01.png" | absolute_url }})
 
 There are some cases where scatter does not work as you might expect.  You can still use the ```plot``` function to generate a scatter plot by using the ```marker``` argument and by setting the ```linewidth``` to ```0```.
 ```Python
@@ -199,6 +219,7 @@ y = np.random.random(100)
 
 plt.plot(x,y,marker='o',linewidth=0)
 ```
+![Scatter Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/scatter02.png" | absolute_url }})
 
 ### Histogram Example
 ```Python
@@ -210,6 +231,8 @@ s = np.random.normal(mu, sigma, 1000)
 
 plt.hist(s)
 ```
+
+![Histogram]({{"/gwu/fa18/cs1012/assets/11_20_2018/histogram.png" | absolute_url }})
 
 There are large number of statistical, probability, and signal processing functions in the ```scipy``` library.  You may need to explicitly install ```scipy``` through Anaconda to gain access to these features.
 
@@ -225,6 +248,7 @@ y = np.sin(x)
 # plot the data
 plt.plot(x,y)
 ```
+![Math Functions]({{"/gwu/fa18/cs1012/assets/11_20_2018/math01.png" | absolute_url }})
 
 ```Python
 import matplotlib.pyplot as plt
@@ -237,6 +261,8 @@ c = np.cos(x)
 plt.plot(x,s)
 plt.plot(x,c)
 ```
+
+![Math Functions]({{"/gwu/fa18/cs1012/assets/11_20_2018/math02.png" | absolute_url }})
 
 ### Adding a legend
 You may wish to generate a legend for your plot.  You may do this by passing a ```label``` argument when plotting a line and then calling the ```legend``` function to generate the legend.
