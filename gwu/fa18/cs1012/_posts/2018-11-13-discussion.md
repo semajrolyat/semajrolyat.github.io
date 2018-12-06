@@ -15,33 +15,6 @@ To support data analysis and plotting, [```scipy```](https://www.scipy.org/), _i
 
 ## Working with ```numpy```
 
-### The Python [```tuple```](https://docs.python.org/3.1/tutorial/datastructures.html#tuples-and-sequences)
-The ```tuple``` is similar to a Python ```list``` except that a ```tuple``` is immutable while a ```list``` is mutable.  A ```tuple``` therefore shares characteristics with the Python ```string``` type.
-
-In Python, a ```tuple``` is constructed using parentheses rather than using the square brackets used for a ```list```, and when a ```tuple``` is printed, it will be printed in parentheses.  For example, the following code creates a ```tuple``` named ```t```:
-```Python
-t = (1,2,3)        # define t as a tuple
-print(t)           # print the tuple t
-print(type(t))     # print the type of t
-print(len(t))      # print the length of t
-print(t[0])        # print the first element of t
-```
-The above code produces the following output:
-```
-(1, 2, 3)
-<class 'tuple'>
-3
-1
-```
-Note that we can use the built in ```len``` function to find the length of a ```tuple``` and we can access elements of the ```tuple``` using the same square bracket notation that is used to access members of a ```list```.  The main difference between a ```list``` and a ```tuple``` is that we cannot change a value in a tuple after it has been created.  For example, the following code produces an error:
-```python
-t = (1,2,3)        # define t as a tuple
-t[0] = 0           # attempt to reassign an element of t
-```
-The error produced is:
-```
-TypeError: 'tuple' object does not support item assignment
-```
 ### [```numpy.ndarray```](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.ndarray.html)
 
 > NOTE: do not get caught up with how complex creating an ```ndarray``` appears to be in the examples in this section.  We will show some much simpler ways further down.
