@@ -14,7 +14,7 @@ layout: default
     <th>Reading</th>
     <th>Exercises</th>
     {%- for post in site.categories.GWU -%}
-      {%- if post.gwclass == "cs1012" and post.docclass == "discussion" and post.term == "fa18" -%}
+      {%- if post.gwclass == "cs1012" and post.docclass == "discussion" and post.term == "sp19" -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
         <tr>
           <td>{{ post.schedule | date: date_format }}</td>
