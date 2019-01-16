@@ -20,7 +20,7 @@ According to the job listing site Indeed, the two sectors with the best job offe
 Computer programming is becoming a necessary skill that services a large number of sectors.  The website Stack Overflow is dedicated to answering programming questions, and according to their metrics, the demand for Python programming skills is [growing rapidly](https://stackoverflow.blog/2017/09/06/incredible-growth-python/) across a [variety of economic sectors](https://stackoverflow.blog/2017/09/14/python-growing-quickly/).
 
 
-It can be argued that those that develop domain expertise in fields outside of computer science are often best suited to translating that knowledge into software and it is not necessary to earn a Computer Science degree to [be in demand](https://www.forbes.com/sites/georgeanders/2015/07/29/liberal-arts-degree-tech/#19e268c1745d) in the technology sector.
+It can be argued that those that develop domain expertise in fields outside of computer science are often best suited to translating that knowledge into software.  It is not necessary to earn a Computer Science degree to [be in demand](https://www.forbes.com/sites/georgeanders/2015/07/29/liberal-arts-degree-tech/#19e268c1745d) in the technology sector and there is a wide demand among all industries for [T-shaped people](https://collegeinfogeek.com/become-t-shaped-person/).
 
 ## Preliminaries
 We will be using Anaconda to ease the problems surrounding installation and maintenance of Python and any additional packages.  We will be working in Python version 3 for this class.  Anaconda is installed on the lab computers; however, you are heavily encouraged to install Anaconda 3 (Python version 3.x) on a laptop and bring it to all future classes.  Anaconda can be downloaded from the [Anaconda Download Page](https://www.anaconda.com/download/).
@@ -53,7 +53,15 @@ To exit the Python interactive environment, call quit with the following stateme
 ## Hello World
 The first program that is taught in most language is called "Hello World".  This program prints "Hello World" to the screen.  In Python, this program is very simple and consists of one line of code.
 
-First open Interactive Python
+In the Python Interactive Environment enter the following command:
+```Python
+>>> print("Hello World!")
+```
+
+Python will respond:
+```
+Hello World!
+```
 
 ## Python Turtle
 Python Turtle Graphics is based on the Logo educational programming language that was developed in 1967.  This language allows a novice programmer to jump right in and draw complex pictures using simple statements.
