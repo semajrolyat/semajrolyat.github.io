@@ -8,6 +8,7 @@ docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 16.1-16.9"
 exercises: "/gwu/fa18/cs1012/2018/11/20/exercises.html"
+term: "fa18"
 ---
 
 ## Using ```matplotlib```

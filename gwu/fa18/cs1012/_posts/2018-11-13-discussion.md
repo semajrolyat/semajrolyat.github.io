@@ -7,6 +7,7 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 exercises: "/gwu/fa18/cs1012/2018/11/13/exercises.html"
+term: "fa18"
 ---
 
 Python has a broad array of applications, but the most widely used area of Python use involves data manipulation and analysis.

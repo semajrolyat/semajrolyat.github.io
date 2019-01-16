@@ -6,7 +6,8 @@ schedule:   2019-01-16 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "[HtTLaCS](http://interactivepython.org/courselib/static/thinkcspy/index.html) 2.4-2.7"
+reading: "HtTLaCS 2.4-2.7"
+term: "sp19"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
@@ -30,7 +31,9 @@ At some point, you may need the unadulterated [Python 3 Documentation](https://d
 
 You may find exercises beyond the course on [Coding Bat](https://codingbat.com/python) and [LeetCode](https://leetcode.com/).
 
-# Interactive Python
+# The Python Interactive Environment
+The Python Interactive Environment is a command line environment where you may execute Python commands.
+
 To open Interactive Python at a shell prompt, type the following at the command line:
 ```
 $ python
@@ -48,7 +51,9 @@ To exit the Python interactive environment, call quit with the following stateme
 ```
 
 ## Hello World
-The first program that is taught in most language is called "Hello World".  This program prints "Hello World" to the screen.
+The first program that is taught in most language is called "Hello World".  This program prints "Hello World" to the screen.  In Python, this program is very simple and consists of one line of code.
+
+First open Interactive Python
 
 ## Python Turtle
 Python Turtle Graphics is based on the Logo educational programming language that was developed in 1967.  This language allows a novice programmer to jump right in and draw complex pictures using simple statements.

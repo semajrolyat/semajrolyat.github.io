@@ -6,6 +6,7 @@ schedule:   2018-10-23 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
+term: "fa18"
 
 ---
 <head>

@@ -6,6 +6,7 @@ schedule:   2018-12-04 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
+term: "fa18"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">

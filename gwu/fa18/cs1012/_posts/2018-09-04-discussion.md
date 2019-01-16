@@ -7,6 +7,7 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 2.2-2.3 & 2.8-2.11"
+term: "fa18"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">

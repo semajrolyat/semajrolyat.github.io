@@ -6,6 +6,7 @@ schedule:   2018-09-11 00:00:00 -0400
 categories: [GWU]
 docclass: "exercises"
 gwclass: "cs1012"
+term: "fa18"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">

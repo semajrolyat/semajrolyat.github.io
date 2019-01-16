@@ -6,6 +6,7 @@ schedule:   2018-09-04 00:00:00 -0400
 categories: [removed]
 docclass: "exercises"
 gwclass: "cs1012"
+term: "fa18"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">

@@ -8,6 +8,7 @@ docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 10.1-10.9; 10.10-10.14 & 10.16-10.19 & 10.24-10.25"
 exercises: "/gwu/fa18/cs1012/2018/11/08/exercises.html"
+term: "fa18"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
