@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="cs1012">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012 - Introduction to Programming with Python - Fall 2018" }}</h2>
+  <table>
+    <th>Date</th>
+    <th>Discussion</th>
+    <th>Reading</th>
+    <th>Exercises</th>
+    {%- for post in site.categories.preview -%}
+      {%- if post.gwclass == "cs1012" and post.docclass == "discussion" -%}
+        {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
+        <tr>
+          <td>{{ post.schedule | date: date_format }}</td>
+          <td>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </td>
+          <td>{{ post.reading }}</td>
+          <td>
+            {%- if post.exercises -%}
+            <a class="exercise-link" href="{{ post.exercises | relative_url }}">
+              Exercises
+            </a>
+            {%- endif -%}
+          </td>
+        </tr>
+      {%- endif -%}
+    {%- endfor -%}
+  </table>
+</div>
