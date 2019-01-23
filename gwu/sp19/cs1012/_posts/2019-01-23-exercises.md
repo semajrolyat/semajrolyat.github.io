@@ -65,7 +65,7 @@ Recall that the Pythagorean theorem is a<sup>2</sup> + b<sup>2</sup> = c<sup>2</
 
 Draw a right triangle with sides of length 100.  Use the Pythagorean theorem to calculate the length of the hypotenuse and draw a line connecting the ends of the sides.  Your turtle must end with the same position and orientation and your triangle must look like the following image:
 
-![Exercise 2 Triangle]({{ "/gwu/fa19/cs1012/assets/exercises01/exercise02.png" | absolute_url }})
+![Exercise 2 Triangle]({{ "/gwu/sp19/cs1012/assets/exercises01/exercise02.png" | absolute_url }})
 
 Save a screenshot of your solution as ```exercise2.png```.
 
