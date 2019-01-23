@@ -109,7 +109,7 @@ Instead of writing code at the Interactive Python Prompt, we can instead write a
 ### Interactive Development Environment
 An Interactive Development Environment (IDE) is a program that provides a number of tools for developers.  An IDE is usually focused around a text editor that allows a programmer to easily write new scripts and to load scripts from disk for editing.  An IDE also typically provides other tools such as a way to run a script, to view output, and a terminal in which the programmer can interact with a running script.  Anaconda provides access to a number of IDEs of varying quality.
 
-For this class, we will use *spyder* as our preferred IDE which is available through Anaconda and is already available on all lab computers.
+For this class, we will use **spyder** as our preferred IDE which is available through Anaconda and is already available on all lab computers.
 
 #### Launching spyder
 Follow the instructions for your operating system.
