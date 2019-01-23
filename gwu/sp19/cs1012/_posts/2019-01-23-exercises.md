@@ -77,7 +77,10 @@ We can use the following python code to draw a circle from the turtle's starting
 >>> from turtle import *
 >>> circle(50)
 {% endhighlight %}
+
 Note that number supplied to the circle is half the diameter which is by definition the radius of the circle.
+
+> The ```circle``` command assumes that the center of the circle is located to the left of the turtle at a distance equal to the radius.
 
 The turtle will draw a circle similar to the following image:
 
