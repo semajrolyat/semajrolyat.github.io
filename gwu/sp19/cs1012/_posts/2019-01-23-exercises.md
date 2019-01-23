@@ -72,7 +72,7 @@ Save a screenshot of your solution as ```exercise2.png```.
 ### Example 2 - Drawing a Circle
 While is is possible to draw a circle using a sequence of primitive moving and turning statements, such a program would be cumbersome to write.  Fortunately, there is a built in `circle` that we can use to control the turtle.
 
-We can use the following python code to draw a circle from the turtle's starting position with a diameter of 100 units:
+We can use the following Python code to draw a circle from the turtle's starting position with a diameter of 100 units:
 {% highlight python %}
 >>> from turtle import *
 >>> circle(50)
@@ -98,13 +98,13 @@ Draw the circumscribed diamond.  The result should look like the following image
 Save a screenshot of your solution as ```exercise3.png```.
 
 ## Writing a Python Script
-While we can accomplish a lot using the interactive python prompt, writing a program entirely at the prompt poses a number of problems:
+While we can accomplish a lot using the Interactive Python Prompt, writing a program entirely at the prompt poses a number of problems:
 * Mistakes are costly.  If you make a mistake, it can be difficult to correct without starting over.
 * To run the same program again, you have to rewrite the program which opens up the possibility of making a new mistake each time you write the program.
 
-Instead of writing code at the interactive python prompt, we can instead write a python program, typically called a script and run the script at a shell prompt or we can write a script in an Interactive Development Environment (IDE) and run the script inside the environment.  
+Instead of writing code at the Interactive Python Prompt, we can instead write a Python program, typically called a script and run the script at a shell prompt or we can write a script in an Interactive Development Environment (IDE) and run the script inside the environment.  
 
-> A python script must have the file extension `.py`.
+> A Python script must have the file extension `.py`.
 
 ### Interactive Development Environment
 An Interactive Development Environment (IDE) is a program that provides a number of tools for developers.  An IDE is usually focused around a text editor that allows a programmer to easily write new scripts and to load scripts from disk for editing.  An IDE also typically provides other tools such as a way to run a script, to view output, and a terminal in which the programmer can interact with a running script.  Anaconda provides access to a number of IDEs of varying quality.
