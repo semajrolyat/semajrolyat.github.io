@@ -13,6 +13,7 @@ layout: default
     <th>Discussion</th>
     <th>Reading</th>
     <th>Exercises</th>
+    <th>Homework</th>
     {%- for post in site.categories.GWU -%}
       {%- if post.gwclass == "cs1012" and post.docclass == "discussion" and post.term == "sp19" -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
@@ -28,6 +29,13 @@ layout: default
             {%- if post.exercises -%}
             <a class="exercise-link" href="{{ post.exercises | relative_url }}">
               Exercises
+            </a>
+            {%- endif -%}
+          </td>
+          <td>
+            {%- if post.homework -%}
+            <a class="exercise-link" href="{{ post.homework | relative_url }}">
+              Homework
             </a>
             {%- endif -%}
           </td>

@@ -1,0 +1,20 @@
+from turtle import *
+
+setup(400,400,200,200)
+screensize(400,400)
+
+penup()
+right(90)
+forward(50)
+left(135)
+pendown()
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(45)
+circle(70.71)
+done()
