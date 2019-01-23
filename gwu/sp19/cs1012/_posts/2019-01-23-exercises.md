@@ -86,6 +86,8 @@ The turtle will draw a circle similar to the following image:
 ### Exercise 3 - Circumscribe a Centered Diamond
 In this exercise, you will draw a diamond that has a circle drawn around it.  The diamond should be centered in the canvas and should have the same dimensions as the square in Exercise 1.  This diamond is simply a square rotated by 45 degrees.  The turtle should end up at the bottom-most point of the diamond and rotated toward the right hand side of the canvas.
 
+> The length of each side of the diamond is 100 units.  You will need to use the Pythagorean theorem to compute the radius of the circle.  
+
 Draw the circumscribed diamond.  The result should look like the following image:
 
 ![Exercise 3 Diamond]({{ "/gwu/sp19/cs1012/assets/exercises01/exercise03.png" | absolute_url }})
