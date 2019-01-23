@@ -18,7 +18,7 @@ Before trying to write any code, plan out how you will to use the primitives def
 
 You are allowed to collaborate with your neighbor on these exercises.  Each of you must complete the programming tasks individually; however, you are encouraged to discuss and work together to design a solution to the problems.
 
-Take a screenshot of each of your solutions and save each screenshot.  Create a zip archive containing all of your screenshots and submit them to blackboard as your solutions to these exercises.
+Take a screenshot of each of your solutions and save each screenshot.  Create a zip archive containing all of your screenshots and submit the zip archive to blackboard as your solutions to these exercises.
 
 ------
 To take a screenshot of a window:
@@ -29,7 +29,7 @@ To take a screenshot of a window:
 
 ------
 
-The solutions to these exercises must be submitted by the end of the day.
+**The solutions to these exercises must be submitted by the end of the day.**
 
 ### Example 1 - Drawing a Square
 Suppose we wish to draw a square.  We can do so using the following set of statements:
@@ -53,7 +53,7 @@ The square in Example 1 is not centered in the middle of the canvas.  Using the 
 
 Draw the square.  The result should look like the following image:
 
-![Exercise 1 Square]({{ "/gwu/fa19/cs1012/assets/exercises01/exercise01.png" | absolute_url }})
+![Exercise 1 Square]({{ "/gwu/sp19/cs1012/assets/exercises01/exercise01.png" | absolute_url }})
 
 Save a screenshot of your solution as ```exercise1.png```.
 
