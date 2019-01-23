@@ -170,7 +170,7 @@ This error is also obscure and is caused by a similar reason as the previous.  Y
 
 > Bugs can be introduced in different versions of software.  This issue appears to be resolved in Python 3.6 and later.  It is important to keep your software updated for this reason.
 
-The bug is primarily due to the ```turtle``` window not being fully unloaded when it is run a first time.  When ```turtle``` is run a second time, this causes an error in the window which then fully unloads.  Practically, this means that every other time you try to run a ```turtle``` program, it errors which can mislead a programmer into believing that the error is with the program and not with the environment.
+The bug is primarily due to the ```turtle``` window not being fully unloaded when it is run a first time.  When ```turtle``` is run a second time, this causes an error in the window which causes the window to be fully unloaded.  Practically, this means that every other time you try to run a ```turtle``` program, it will error which can mislead a programmer into believing that the error is in the program and not due to the environment.
 
 Fortunately, the solution is rather simple...  instead of using just the following statement at the beginning of a turtle script:
 ```python
