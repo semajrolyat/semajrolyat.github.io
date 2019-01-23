@@ -14,6 +14,11 @@ term: "sp19"
 
 ## Exercises 1
 
+### Due Date
+**The solutions to these exercises must be submitted by the end of the day.**
+
+### Instructions
+
 Before trying to write any code, plan out how you will to use the primitives defined here to draw the solution.  If you don't plan, you may make a mistake and have to start over.  It's a good idea to have pen and paper available.
 
 You are allowed to collaborate with your neighbor on these exercises.  Each of you must complete the programming tasks individually; however, you are encouraged to discuss and work together to design a solution to the problems.
@@ -28,8 +33,6 @@ To take a screenshot of a window:
 (Windows) hold **Alt+PrtSc**
 
 ------
-
-**The solutions to these exercises must be submitted by the end of the day.**
 
 ### Example 1 - Drawing a Square
 Suppose we wish to draw a square.  We can do so using the following set of statements:
