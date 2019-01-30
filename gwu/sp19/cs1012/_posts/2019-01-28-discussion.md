@@ -7,6 +7,8 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 2.2-2.3 & 2.8-2.11"
+exercises: "/gwu/sp19/cs1012/2019/01/30/exercises.html"
+homework: "/gwu/sp19/cs1012/2019/01/30/homework.html"
 term: "sp19"
 ---
 <head>
@@ -79,7 +81,7 @@ The expression to the right of the assignment operator is evaluated and the valu
 
 ```python
 x = 0         # assign x the value of 0
-x = x + 1     # x on the right is equal to 0 while x on the right is 1
+x = x + 1     # x on the right is equal to 0 while x on the left is 1
 ```
 
 
