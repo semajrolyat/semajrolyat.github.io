@@ -7,6 +7,8 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 3.1-3.5 & 6.1-6.3"
+exercises: "/gwu/sp19/cs1012/2019/02/13/exercises.html"
+homework: "/gwu/sp19/cs1012/2019/02/13/homework.html"
 term: "sp19"
 ---
 <head>
@@ -141,3 +143,16 @@ for i in range(n,0,-1):
 
 
 [Python documentation on ```range()```](https://docs.python.org/3/library/stdtypes.html#ranges)
+
+### The Accumulator Pattern
+As suggested above, the notations ```i``` and ```n``` are borrowed from Sigma notation which is describes summation over a large number of elements.  We fulfill this mathematical model using the _**accumulator**_ pattern inside a loop.  An accumulator is simply a variable that is reassigned repeatedly to itself combined with some mathematical operation inside a loop.  For example:
+
+```python
+x = 0
+for i in range(10):
+  x = x + i        # x is an accumulator
+```
+
+In the above example, ```x``` is an accumulator.  Each pass through the loop, the value of ```x``` is updated with the "running total" of the summation and the process adds all the numbers between in the interval [0,9] and computes and stores the summation in ```x```.
+
+Accumulators are not limited to summation; however, it is the most common form that accumulators are expressed in.
