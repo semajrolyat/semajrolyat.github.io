@@ -6,7 +6,7 @@ schedule:   2019-02-11 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "HtTLaCS 3.1-3.5 & 6.1-6.3"
+reading: "HtTLaCS 7.1-7.8 & 8.1-8.7"
 exercises: "/gwu/sp19/cs1012/2019/02/13/exercises.html"
 homework: "/gwu/sp19/cs1012/2019/02/13/homework.html"
 term: "sp19"
