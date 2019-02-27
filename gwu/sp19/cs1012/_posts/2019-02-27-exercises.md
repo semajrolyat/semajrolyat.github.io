@@ -78,7 +78,7 @@ Input a year: 2000
 **Example 3**
 ```
 Input a year: 2001
-2001 is a leap year
+2001 is not a leap year
 ```
 2001 is not evenly divisible by 4, so 2001 is not a leap year
 
