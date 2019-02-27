@@ -7,6 +7,8 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 3.1-3.5 & 6.1-6.3"
+exercises: "/gwu/sp19/cs1012/2019/02/27/exercises.html"
+homework: "/gwu/sp19/cs1012/2019/02/27/homework.html"
 term: "sp19"
 ---
 <head>
@@ -239,55 +241,6 @@ if BOOLEAN_EXPRESSION:
 
 The following flow chart models the nested ```if``` conditional structure:
 ![Nested If Flowchart]({{ "/gwu/fa18/cs1012/assets/10_02_2018/nested_if.png" | absolute_url }})
-
-### Boolean Functions
-Functions can return a boolean value.  Suppose that we are writing a program that regularly checks whether a value is odd or not.  We can write a function that explicitly checks the condition and returns the corresponding truth value.  For example, the following function ```isOdd(x)``` returns ```False``` if the parameter ```x``` is even and returns ```True``` if ```x``` is odd:
-```python
-def isOdd(x):
-    if x % 2 == 0:
-        result = False
-    else:
-        result = True
-    return result
-```
-We can use this function in a conditional statement.  Suppose we need to branch our program one way if the variable ```y``` is odd and another way if ```y``` is even.  The following code illustrates this usage of ```isOdd```:
-```python
-def isOdd(x):
-    if x % 2 == 0:
-        result = False
-    else:
-        result = True
-    return result
-
-y = int(input("Enter a number: "))
-if isOdd(y):
-    print("You entered an odd number.")
-else:
-    print("You entered an even number.")
-```
-If you enter ```1```, ```isOdd``` returns ```True``` and the main program decends into the ```if``` branch; however, if you enter ```2```, ```isOdd``` returns ```False``` and the main program decends into the ```else``` branch.
-
-### Structuring Functions that Contain Conditionals
-Now that we have established conditionals, you should see that ```return``` does not have to appear at the end of a function.  We have also established that when the ```return``` keyword is encountered, the function immediately exits.
-
-We can return inside the branches themselves as in the following example:
-```python
-def isOdd2(x):
-    if x % 2 == 0:
-        return False
-    else:
-        return True
-```
-Or we can limit the number of branches by assuming a return value if the branch conditions fail.  The following example demonstrates this concept:
-
-```python
-def isOdd3(x):
-    if x % 2 == 0:
-        return False
-    return True
-```
-
-The structures of ```isOdd``` or ```isOdd3``` are generally the safest models.  If conditionals are nested at multiple levels inside one another, it is difficult to debug and it is easy to overlook a return case.
 
 ### Looping Control Structures
 We have already discussed the ```for``` loop control structure which gives us the ability to iterate a number of times.  The ```for``` loop is the most widely used loop control structure because many times we know in advance that we will be iterating over a known range of numbers or on a data structure with a fixed size.
