@@ -12,7 +12,7 @@ term: "sp19"
   <link href="/css/syntax.css" rel="stylesheet">
 </head>
 
-## Exercises 5
+## Exercises 6
 
 ### Due Date
 **The solutions to these exercises must be submitted by the end of the day.**
