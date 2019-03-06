@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Exercises"
-date:   2018-03-06 00:00:00 -0400
-schedule:   2018-03-06 00:00:00 -0400
+date:   2019-03-06 00:00:00 -0400
+schedule:   2019-03-06 00:00:00 -0400
 categories: [GWU]
 docclass: "exercises"
 gwclass: "cs1012"
