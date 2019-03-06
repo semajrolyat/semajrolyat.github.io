@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Exercises"
-date:   2018-09-18 00:00:00 -0400
-schedule:   2018-09-18 00:00:00 -0400
+date:   2018-03-06 00:00:00 -0400
+schedule:   2018-03-06 00:00:00 -0400
 categories: [GWU]
 docclass: "exercises"
 gwclass: "cs1012"
-term: "fa18"
+term: "sp19"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
