@@ -72,7 +72,7 @@ Mathematical operations cannot be performed on strings.  For example, the follow
 While the above operations are nonsensical, Python allows the operators ```+``` and ```*``` to be used with strings; however, in the context of strings, these operators are not interpreted as mathematical operators but as string operators.
 
 #### Concatenation : using the ```+``` string operator
-To _**concatenate**_ two strings means to join the following string to the leading string.
+To _**concatenate**_ two strings means to join the following string to the leading string into a single string.
 
 If Python interprets one of the binary operands for the ```+``` operator as a string, Python will attempt to concatenate the two operands; however, both operands must be interpreted as strings for the concatenation to succeed.
 
