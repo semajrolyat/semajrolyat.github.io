@@ -155,6 +155,48 @@ When indexing a string, a new string consisting of the characters specified is r
 
 We refer to the number used to select the position of a character (or a value in a list) as the _**index**_.
 
+### Length of a string
+Python provides a built in function that can be used to determine the length of a string.  The ```len(<string>)``` function returns the number of characters in the string.  For example, the following code prints the length of the string ```s```:
+```Python
+s = "Hello World"
+n = len(s)
+print(n)
+```
+The above code produces the following output:
+```
+11
+```
+
+### Example - Palindrome
+A palindrome is a string that has the same sequence of characters regardless of whether the string is read forwards or backwards.  There are a number of ways to implement an algorithm that checks whether or not a string is a palindrome.  This example illustrates one method where each character from the front is checked against its corresponding character from the back of the string:
+
+```Python
+# allow the user to input a string
+s = input("Input a string: ")
+
+# compute half the length of the string
+mid = len(s)//2
+
+# assume the string is a palindrome
+ispalindrome = True
+
+# iterate up to half the length of the string
+for i in range(mid):
+    # compare the ith character from the front with the ith character from the back
+    if s[i] != s[-(i+1)]:
+        # if the characters do not match, the string is not a palidrome
+        ispalindrome = False
+        break
+
+# if we never proved that the string is not a palindrome
+# then we assume it is
+if ispalindrome:
+    print(s + " is a palindrome")
+else:
+    print(s + " is not a palindrome")
+```
+
+The above program begins with the assumption that the candidate string is a palindrome.  The algorithm iterates up to half the length of the string.  Recall that this uses integer division, so both half of 7 and 6 is 3.  This is nice because we do not have to consider a difference between odd and even length strings.  During iteration, the algorithm compares the ith character from the front with the ith character from the back of the string, and if the characters are different then we have proven that the string is not a palindrome.  If we finish iteration without determining that the candidate string is not a palidrome, then we can assume that it is.
 
 ### References
 
