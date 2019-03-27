@@ -51,7 +51,7 @@ Submit ```exercise1.py```.
 #### Exercise 2 - Generating Random Floating Point Numbers
 Create a file named ```exercise2.py```.
 
-Write a script that generates ten random floating point numbers between -100.0 and 100.0 and prints out each generated number.  
+Write a script that generates random floating point numbers between -100.0 and 100.0 and prints out each generated number.  
 
 Write a function named ```randomfloat``` that takes a range as two parameters.  The definition for this function should be:
 
