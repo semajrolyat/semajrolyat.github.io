@@ -6,7 +6,6 @@ schedule:   2019-04-01 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "HtTLaCS "
 term: "sp19"
 ---
 <head>
