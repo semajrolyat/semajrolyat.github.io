@@ -7,7 +7,7 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 exercises: "/gwu/sp19/cs1012/2019/04/03/exercises.html"
-exercises: "/gwu/sp19/cs1012/2019/04/03/homework.html"
+homework: "/gwu/sp19/cs1012/2019/04/03/homework.html"
 term: "sp19"
 ---
 <head>
