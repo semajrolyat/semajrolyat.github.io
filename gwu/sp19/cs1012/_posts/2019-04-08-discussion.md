@@ -6,6 +6,8 @@ schedule:   2019-04-08 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
+exercises: "/gwu/sp19/cs1012/2019/04/10/exercises.html"
+homework: "/gwu/sp19/cs1012/2019/04/10/homework.html"
 term: "sp19"
 ---
 
