@@ -12,7 +12,7 @@ layout: default
     <th>Date</th>
     <th>Discussion</th>
     <th>Reading</th>
-    <th>Exercises</th>
+    <th>Lab</th>
     <th>Homework</th>
     {%- for post in site.categories.GWU -%}
       {%- if post.gwclass == "cs1012" and post.docclass == "discussion" and post.term == "fa19" -%}
@@ -26,9 +26,9 @@ layout: default
           </td>
           <td>{{ post.reading }}</td>
           <td>
-            {%- if post.exercises -%}
-            <a class="exercise-link" href="{{ post.exercises | relative_url }}">
-              Exercises
+            {%- if post.lab -%}
+            <a class="lab-link" href="{{ post.lab | relative_url }}">
+              Lab
             </a>
             {%- endif -%}
           </td>
