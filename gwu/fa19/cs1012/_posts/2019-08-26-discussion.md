@@ -7,7 +7,7 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 2.4-2.7"
-exercises: "/gwu/sp19/cs1012/2019/08/28/lab01.html"
+exercises: "/gwu/sp19/cs1012/2019/08/28/exercises.html"
 term: "fa19"
 ---
 <head>
