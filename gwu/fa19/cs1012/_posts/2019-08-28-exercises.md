@@ -6,7 +6,7 @@ schedule:   2019-08-28 00:00:00 -0400
 categories: [GWU]
 docclass: "exercises"
 gwclass: "cs1012"
-term: "fa19"
+term: "sp19"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
