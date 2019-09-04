@@ -10,10 +10,7 @@ layout: default
   <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012 - Fall 2019 - Lab Section 30" }}</h2>
   <table>
     <th>Date</th>
-    <th>Discussion</th>
-    <th>Reading</th>
     <th>Lab</th>
-    <th>Homework</th>
     {%- for post in site.categories.GWU -%}
       {%- if post.gwclass == "cs1012" and post.docclass == "lab" and post.term == "fa19" -%}
         {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
