@@ -17,9 +17,9 @@ layout: default
         <tr>
           <td>{{ post.schedule | date: date_format }}</td>
           <td>
-            <a class="lab-link" href="{{ post.url | relative_url }}">
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
             </a>
-            {{ post.title | escape }}
           </td>
         </tr>
       {%- endif -%}
