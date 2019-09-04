@@ -12,76 +12,68 @@ term: "sp19"
   <link href="/css/syntax.css" rel="stylesheet">
 </head>
 
-##
-
-Lab 2 - Triangles & Circles
+## Lab 2 - Triangles & Circles
 
 
-###Goals:
-- Dive deeper into geometry using the **Turtle** package
+### Goals:
+- Dive deeper into geometry using the **turtle** package
 - Draw a right triangle with **2** equal sides
 - Draw a flower pattern using **circle()**
 - Draw a diamond inside a circle
 
-##
-
 ### Exercise 1 - Draw a right triangle with 2 equal sides
 
-You may choose any length to make the triangle sides.
+An Isosceles right triangle has two sides of the same length with a right angle between them.  For any triangle, the interior angles add up to **180°**.  If an Isosceles right triangle has a **90°** right angle and sides of equal length, then the remaining angles must be **45°**.
+```
+180° = 90° + 2*45°
+```
 
-**Keep in mind:** In a right triangle, the **hypotenuse** will always be larger than the other two sides. How is this calculated? Pythagorean Theorem!
-``` a² + b² = c² ```
+**Keep in mind:** In a right triangle, the **hypotenuse** will always be larger than the other two sides. How is this calculated?  Use the Pythagorean Theorem!
+```
+a² + b² = c²
+```
 
-What about inner angles?
+> We have not discussed how to calculate and store values in Python yet, so compute the length of the hypotenuse using a calculator program by solving for ```c``` and plug in the result into the ```forward``` command when drawing the hypotenuse.
 
-**Keep in mind:** All inner angles in a triangle add up to **180°**. How can you use this information to draw a hypotenuse?
+Draw a right triangle where the two sides of equal length are each 100 units long.
 
-```exercise1.png``` should look like this:
+```exercise1.png``` should look something like this:
 
-![lab2ex1]({{ "/gwu/sp19/cs1012/assets/lab02/triangle.png" | absolute_url }})
+![lab2ex1]({{ "/gwu/fa19/cs1012/assets/lab02/triangle.png" | absolute_url }})
 
-##
+> You can choose to start at any corner of the triangle and it does not have to be centered within the screen.  The above image is intended to just illustrate one way the triangle may be drawn; however, the triangle must be an Isosceles right triangle.
+
 
 ### Exercise 2 - Flowered Circles
 
+In this exercise we will use a new command that we have not discussed before, ```circle```.  ```circle``` is very similar to ```forward``` in its usage; however, it moves the ```turtle``` in a circle instead of in a line.
 
-**New function:** ``circle(radius) ``
+Just like ```forward```, ```circle``` accepts on value as a parameter, _i.e._ a value in parentheses.  The value represents the radius of the circle.  
 
-Remember how the ``forward(numPixels)`` function moved **numPixels**? This values is called a **parameter**, or **argument**.
+When using the ```circle``` command, the turtle sits on the edge of the circle.  The center of the circle will be to the left of the turtles forward orientation however many units are specified by the radius.
 
-The **radius** parameter in ``circle()`` refers to the number of pixels in the radius when drawing.
+> You should probably test the ```circle``` command a bit by experimenting with turning and drawing a few circles of various radii to understand the relationship between the center and the turtle orientation.
 
-Try to call ``circle()`` with different values for the radius to get an idea for the function.
+For exercise 2, you will draw a flower pattern as illustrated by the following image:
 
-For exercise 2, you will draw a flower pattern this this:
+![lab2ex2]({{ "/gwu/fa19/cs1012/assets/lab02/circles.png" | absolute_url }})
 
-![lab2ex2]({{ "/gwu/sp19/cs1012/assets/lab02/circles.png" | absolute_url }})
+You **only** need to combine some of the ```turtle``` commands you already know with the new ```circle``` command.
 
-
-You **only** need the turtle commands you already know, as well as the new ``circle()`` function.
-
-There **must** be 5 'petals' in the flower pattern.
+There **must** be 5 'petals' in the flower pattern and each circle must have a radius of 100 units.
 
 **Hint:** look at (0,0). Notice that every circle touches at this point
 
-##
-
 ### Exercise 3 - Diamond inside Circle
 
-Using the turtle functions you already know, as well as ``circle``, you will draw a diamond circumscribed in a circle like this:
+Using the ```turtle``` commands you already know and the ``circle`` command, draw a diamond circumscribed by a circle.  The circle must be centered in the middle of the canvas and the corners of the diamond must lie on the edge of the circle.  The radius of the circle must be 100 units.  For example, your image should look like the following image:
 
-![lab2ex3]({{ "/gwu/sp19/cs1012/assets/lab02/diamond.png" | absolute_url }})
+![lab2ex3]({{ "/gwu/fa19/cs1012/assets/lab02/diamond.png" | absolute_url }})
 
+**Hint:** In order to determine the length of an edge of the diamond, you will probably need to use the Pythagorean Theorem.
 
-**keep in mind:** as you saw in exercise 2, calling ``circle()`` draws the circle starting from the edge, **90°** to the left of turtle's view direction.
-
-**Hint:** The distance from one corner of the diamond to another is the same as the diameter of the circle.
-
-##
-
-###Deliverables:
-- Your final submission will be ```netid_lab02.zip```
+### Submission:
+- Your final submission will be ```<netid>_lab02.zip``` where you will substitute your net id for ```<netid>```.
 - This zip **must** contain:
   - **Python Scripts:** ```exercise1.py```, ```exercise2.py```, ```exercise3.py```
-  - **Screenshots of output:** ```exercise1.png```,
-```exercise2.png```, ```exercise3.png```
+  - **Screenshots of output:** ```exercise1.png```, ```exercise2.png```, ```exercise3.png```
