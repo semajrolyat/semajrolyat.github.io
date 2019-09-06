@@ -8,6 +8,7 @@ docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 2.4-2.7"
 lab: "/gwu/fa19/cs1012/2019/08/28/lab.html"
+homework: "/gwu/fa19/cs1012/2019/09/06/homework.html"
 term: "fa19"
 ---
 <head>
