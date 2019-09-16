@@ -7,7 +7,7 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 4.4-4.7"
-term: "sp19"
+term: "fa19"
 ---
 <head>
   <link href="/css/syntax.css" rel="stylesheet">
