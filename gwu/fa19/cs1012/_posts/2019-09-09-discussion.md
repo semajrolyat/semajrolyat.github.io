@@ -82,6 +82,25 @@ x = 0         # assign x the value of 0
 x = x + 1     # x on the right is equal to 0 while x on the left is 1
 ```
 
+## Reassignment
+The expression on the right side of the assignment operator is evaluated before any assignment is made.  We can therefore use the same variable that is being assigned in the expression on the right side of the assignment operator.  The following code is legal if ```x``` has been assigned before the program reaches this code:
+```python
+x = x + 1
+```
+
+For example, the following is legal in Python:
+```python
+x = 5
+x = x + 1
+```
+
+**Question**: If the following code was the entire Python program, why would this code generate an error:
+```python
+y = y + 1
+```
+**Question**: Why might we use reassignment?
+
+
 ## Readability
 * Variables should be given meaningful names.  A meaningful name improves the readability of code.
 * While many of the early examples in this course use single letter variable names  _i.e._ ```a```, ```b```, ```x```, ```y```, etc., these names are not generally meaningful unless they apply a known mathematical theorem.
