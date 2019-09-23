@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Types"
+title:  "For Loops"
 date:   2019-09-23 00:00:00 -0400
 schedule:   2019-09-23 00:00:00 -0400
 categories: [GWU]
