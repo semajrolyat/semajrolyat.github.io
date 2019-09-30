@@ -243,7 +243,7 @@ Let's check this with a truth table:
 
 Now, double check the logical consistency between the original natural language description and the result indicated by the truth table.  Based on the original description, the logical expression should be false anywhere that either of the constituent boolean expressions are true, so is this the case?  Yes it is.  What about the other cases where the logical statement should be true, _i.e._ when none of the constituent boolean expressions are true, is this the case?  Yes.
 
-Rather than trying to contort the expression, we can simply interprete it then invert the result using ```not```. 
+Rather than trying to contort the expression, we can simply interprete it then invert the result using ```not```.
 
 _________
 
@@ -263,6 +263,7 @@ In the above ```if``` statement, the body of the ```if``` statement is only eval
 > The book refers to this as a "unary conditional"
 
 The following flow chart models the ```if``` conditional structure:
+
 ![If Flowchart]({{ "/gwu/fa19/cs1012/assets/discussion05/if.png" | absolute_url }})
 
 #### "if-else" Conditional
@@ -281,6 +282,7 @@ Note that the ```else``` block follows the same conventions as the ```if``` bloc
 > The book refers to this as a "binary conditional"
 
 The following flow chart models the ```if-else``` conditional structure:
+
 ![If-Else Flowchart]({{ "/gwu/fa19/cs1012/assets/discussion05/if_else.png" | absolute_url }})
 
 #### "if-else if-else" Conditional
@@ -301,6 +303,7 @@ Only one of the branches will be exectuted, _i.e._ the first branch where the co
 > The book refers to this as a "chained conditional"
 
 The following flow chart models the ```if-elif-else``` conditional structure:
+
 ![If-Elif-Else Flowchart]({{ "/gwu/fa19/cs1012/assets/discussion05/if_elif_else.png" | absolute_url }})
 
 ### Nested Conditionals
@@ -314,6 +317,7 @@ if BOOLEAN_EXPRESSION:
 ```
 
 The following flow chart models the nested ```if``` conditional structure:
+
 ![Nested If Flowchart]({{ "/gwu/fa19/cs1012/assets/discussion05/nested_if.png" | absolute_url }})
 
 ### Looping Control Structures
@@ -328,6 +332,7 @@ while BOOLEAN_EXPRESSION:
 ```
 
 The following flow chart models the ```while``` control structure:
+
 ![While Flowchart]({{ "/gwu/fa19/cs1012/assets/discussion05/while.png" | absolute_url }})
 
 
