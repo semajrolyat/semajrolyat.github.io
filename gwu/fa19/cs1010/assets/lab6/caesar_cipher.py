@@ -1,31 +1,33 @@
-# Sample of casear cipher, changing the letters of a string to the next letter
-# Date: Sep. 30th, 2019; Author: https://stackoverflow.com/questions/8886947/caesar-cipher-function-in-python
-
-def casear(a, key):
-
-    str = ""
+'''
+Simple caesar cipher
+'''
+def caesar(text, key):
+    msg = ""
+    text = text.upper()
+    sign = 1
+    if key < 0:
+        sign = -1
+        key *= sign;
     if key > 26:
         key %= 26
-    for i in range(0, len(a)):
-        if a[i].isalpha():
-            b = ord(a[i])
-            b += key
-            print(a[i])
-            print(b)
-            if b == 91:
-                str += chr(65)
-            elif b > 122:
-                c = b - 122
-                str += chr(96 + c)
-            else:
-                str += chr(b)
+        
+    for i in range(0, len(text)):
+        if text[i].isalpha():
+            x = ord(text[i]) - ord("A")
+            x = (x + sign * key) % 26
+            msg += chr(x + ord("A"))
         else:
-            str += a[i]
-    print(str)
+            msg += text[i]
+    return msg
 
 
-a = 'A SAMPLE TEXT Z'
+plaintxt = 'A SAMPLE TEXT Z'
 # Change key as you wish
-key = 1
-casear(a, key)
-print()
+key = 10
+ciphertxt = caesar(plaintxt, key)
+key *= -1
+msg = caesar(ciphertxt, key)
+
+print(plaintxt)
+print(ciphertxt)
+print(msg)

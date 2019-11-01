@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 fig = plt.figure()
 
 # Original Image
-im = Image.open("lenna.png")
+im = Image.open("myimage.png")
 originalpix = np.array(im)
 ax0 = fig.add_subplot(321)
 ax0.set_title('Original Image', fontsize=9)
@@ -64,4 +64,3 @@ plt.imshow(pix, cmap='gray')
 
 fig.savefig('enc_dec_random_key-image_xor.png')
 plt.show()
-
