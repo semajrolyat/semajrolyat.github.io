@@ -7,6 +7,7 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 10.1-10.14"
+homework: "/gwu/fa19/cs1012/2019/11/01/homework.html"
 term: "fa19"
 ---
 <head>
