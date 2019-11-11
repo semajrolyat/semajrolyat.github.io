@@ -6,7 +6,7 @@ schedule:   2019-11-11 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-term: "sp19"
+term: "fa19"
 ---
 
 <head>
