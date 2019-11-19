@@ -6,6 +6,7 @@ schedule:   2019-11-11 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
+homework: "/gwu/fa19/cs1012/2019/11/15/homework.html"
 term: "fa19"
 ---
 
