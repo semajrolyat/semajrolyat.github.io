@@ -542,7 +542,7 @@ The ```std``` function computes the standard deviation on the distribution of va
 import numpy as np
 A = np.arange(100)
 A = A.reshape((10,10))
-print(np.std(A[0,:]))
+print(np.std(A[:,0]))
 ```
 The above code produces the following output:
 ```
