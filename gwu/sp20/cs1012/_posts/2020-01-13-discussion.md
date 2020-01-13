@@ -5,7 +5,6 @@ date:   2020-01-13 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "HtTLaCS 2.4-2.7"
 term: "sp20"
 ---
 <head>
