@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="cs1012">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <h2 class="cs1012-list-heading">{{ page.list_title | default: "CS 1012 - Spring 2020 - Lab Section 34" }}</h2>
+  <table>
+    <th>Date</th>
+    <th>Lab</th>
+    {%- for post in site.categories.GWU -%}
+      {%- if post.gwclass == "cs1012" and post.docclass == "lab" and post.term == "sp20" and post.date1 -%}
+        {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
+        <tr>
+          <td>{{ post.date1 | date: date_format }}</td>
+          <td>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </td>
+        </tr>
+      {%- endif -%}
+    {%- endfor -%}
+  </table>
+</div>
