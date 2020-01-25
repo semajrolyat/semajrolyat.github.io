@@ -5,6 +5,7 @@ date:   2020-01-13 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
+homework: "/gwu/fa19/cs1012/2020/01/24/homework.html"
 term: "sp20"
 ---
 <head>
