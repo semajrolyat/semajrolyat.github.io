@@ -367,7 +367,7 @@ Programmers communicate _**intent**_ through types.  Computers are rather simple
 The fundamental data types that we have been introduced to so far are integer, floating-point, and string.
 
 #### Integer
-In Python, the keyword ```int``` is used to specify an [integer](https://en.wikipedia.org/wiki/Integer_(computer_science%29) type.  The ```int``` type maps generally to the [Set of Integers](https://en.wikipedia.org/wiki/Integer); however, due to the natural limits imposed by computer hardware, not all integers can be represented, but we have to reach really large numbers (positive or negative) before we need to worry about whether an integer can be represented.
+In Python, the keyword ```int``` is used to specify an [integer](https://en.wikipedia.org/wiki/Integer_(computer_science)) type.  The ```int``` type maps generally to the [Set of Integers](https://en.wikipedia.org/wiki/Integer); however, due to the natural limits imposed by computer hardware, not all integers can be represented, but we have to reach really large numbers (positive or negative) before we need to worry about whether an integer can be represented.
 
 For example, a 32-bit integer can represent a range of more than 2 billion positive and negative numbers or a total range exceeding 4 billion numbers.  If we are working with whole numbers within these ranges, we do not need to be too concerned with numerical errors.  However, this does highlight an important consideration, memory and therefore representations are finite.
 
