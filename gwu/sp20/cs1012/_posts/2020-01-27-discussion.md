@@ -431,7 +431,7 @@ We have discussed in class that we may need to control the type of the values pr
 
 ```python
 x = int(1.0)/int(1.5)
-y = int(1.0/1/5)
+y = int(1.0/1.5)
 print(x)
 print(y)
 ```
