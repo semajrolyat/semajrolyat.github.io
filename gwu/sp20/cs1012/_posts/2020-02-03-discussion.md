@@ -7,6 +7,7 @@ categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
 reading: "HtTLaCS 7.1-7.8 & 8.1-8.7"
+homework: "/gwu/sp20/cs1012/2020/02/07/homework.html"
 term: "sp20"
 ---
 <head>
