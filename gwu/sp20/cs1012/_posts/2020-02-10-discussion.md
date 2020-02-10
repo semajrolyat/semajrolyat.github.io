@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Conditional Control Structures"
+title:  "Conditionals and Branching Control Structures"
 date:   2020-02-10 00:00:00 -0400
 schedule:   2020-02-10 00:00:00 -0400
 categories: [GWU]
 docclass: "discussion"
 gwclass: "cs1012"
-reading: "HtTLaCS 3.1-3.5 & 6.1-6.3"
+reading: "HtTLaCS 7.1-7.8"
 term: "sp20"
 ---
 <head>
@@ -344,7 +344,7 @@ while x < 1000:
   x = x * 2
 ```
 
-A ```while``` loop can iterate an infinite number of times which is often called an _**inifinte loop**_, meaning that the loop will never terminate.  While it is possible, it is generally difficult to inadvertantly create an infinite ```for``` loop.  A programmer must be very careful and make sure that the logic that controls a terminating condition is correctly implemented when working with a ```while``` loop.
+A ```while``` loop can iterate an infinite number of times which is often called an _**infinite loop**_, meaning that the loop will never terminate.  While it is possible, it is generally difficult to inadvertently create an infinite ```for``` loop.  A programmer must be very careful and make sure that the logic that controls a terminating condition is correctly implemented when working with a ```while``` loop.
 
 ### ```for``` Is a ```while``` Loop
 We can easily model the ```for``` loop using a ```while``` loop, and in actuality, a ```for``` loop is really a ```while``` loop underneath the hood.  Consider the following ```while``` loop example:
