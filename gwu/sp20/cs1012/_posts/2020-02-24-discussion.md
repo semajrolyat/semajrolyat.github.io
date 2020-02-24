@@ -174,9 +174,9 @@ _________
 The ```return``` keyword allows the normal control flow of functions to be superseded.  If a statement begins with ```return```, the function will immediately return back to the calling context.
 ```python
 def biz():
-  a = 1
+  print(1)
   return     # biz() returns to the calling context here because of the return
-  b = 2      # due to the previous statement, this statement is unreachable
+  print(2)      # due to the previous statement, this statement is unreachable
 
 biz()
 ```
@@ -184,23 +184,24 @@ biz()
 There is an implicit ```return``` at the end of all functions.  For example, the following code:
 ```python
 def buz():
-  a = 1
+  print(1)
 
-biz()
+buz()
 ```
 
 Is actually processed like this:
 ```python
 def buz():
-  a = 1
+  print(1)
   return     # this return is not necessary because it is implied at the end of all functions
 
-biz()
+buz()
 ```
 
 ```return``` is dual usage.  ```return``` can be used by itself as above or it can be followed by an expression which offers us the ability to return data from a function back to the calling context.
 
 _________
+
 ### Returning data from a function
 Functions can perform computations and _**return**_ the results of those computations using the ```return``` keyword.  Any expression that appears to the right of the ```return``` keyword is evaluated and the function immediately jumps back to the calling context with that value.  In other words, ```return``` assigns a value to the function itself which can be used in an expression in the calling context.
 
@@ -210,6 +211,7 @@ For example, in the following function, the value of ```10``` is returned from t
 def bar():
     return 10
 x = bar()       # this is the calling context
+print(x)
 ```
 
 When we wrote our scripts for the diamond exercises, we needed to compute the hypotenuse of a right triangle.  We could use our own function to compute the hypotenuse instead:
@@ -222,11 +224,13 @@ def hypotenuse(side1,side2):
     return sqrt(side1**2 + side2**2)
 radius = 50
 length = hypotenuse(radius,radius)
+print(length)
 ```
 
 Recall that in assignment, the right side is evaluated first, and therefore in the final statement ```length = hypotenuse(radius,radius)```, the ```hypotenuse``` function is called first.  The ```hypotenuse``` function performs its computations and the value is returned back to the calling context.  The assignment of ```length``` is then performed and ```length``` is assigned whatever value was computed by calling ```hypotenuse(radius,radius)```.
 
 To illustrate further, consider the following code:
+
 ```python
 def fiz():
     return 3;
@@ -236,7 +240,9 @@ def jaz():
     return -1;
 
 result = fiz() + buz() * jaz()
+print(result)
 ```
+
 Recall that expressions are computed from left to right.  When the last line ```result = fiz() + buz() * jaz()```, the operations proceed in the following order:
 1. The expression on the right side of the assignment is computed first.
    1. The expression is scanned from left to right and any precedence rules are applied.
@@ -289,10 +295,11 @@ fun3(myglobal)
 ```
 
 ```fun3``` is the correct approach because ```fun3``` forces the users of the function to explicitly assign all parameters and a local copy of the global will be made.  There will be no possibility of mysterious changes to ```myglobal``` by ```fun3``` and the programmer who uses ```fun3``` will know exactly what parameters must be provided.  A programmer still has the option of updating ```myglobal``` in a more controlled and safer way if the updated value is returned by the function.  For example, if the intent is for the function to produce an answer that should update ```myglobal```, the code should be designed this way:
+
 ```python
 myglobal = 10            # myglobal has global scope
 def fun4(mylocal):
-    # do stuff like updata mylocal
+    # do stuff like update mylocal
     return mylocal
 myglobal = fun4(myglobal)
 ```
