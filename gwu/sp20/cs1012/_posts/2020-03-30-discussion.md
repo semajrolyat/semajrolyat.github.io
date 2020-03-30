@@ -457,6 +457,33 @@ TypeError: 'tuple' object does not support item assignment
 
 > We have used parentheses in multiple contexts throughout the course.  Parentheses are grouping operators in expressions and they are used in both function definition and function calling.  How does Python know how to interpret parentheses?  It is handled just like the square brackets.  If parentheses are encountered with a label preceding the open parenthesis, it is interpreted as related to a function, if parentheses are encountered in an expression, they are interpreted as grouping operators, and otherwise parentheses are interpreted as creating a tuple.
 
+### Sequence Conversion Functions
+We may need to convert from one sequence type to another.  While the mutability rules for sequence types are in place to protect the integrity of the original data, we may need to take an intermediate step and convert from one type to another and store the changes in a new variable.  Just like there is a function that can convert types to a string, there are functions to convert to lists and tuples.
+
+The ```list``` function takes a set of data as input, converts the input to a list type, and then returns a list.  The ```tuple``` function takes a set of of data as input, converts the input to a tuple type, and then returns a tuple.  For example, the following program converts a list to a tuple and converts a tuple to a list:
+
+```python
+l1 = [1,2,3,4,5]
+t = tuple(l1)
+l2 = list(t)
+
+print(l1)
+print(t)
+print(l2)
+```
+
+The above code produces the following output:
+
+```
+[1, 2, 3, 4, 5]
+(1, 2, 3, 4, 5)
+[1, 2, 3, 4, 5]
+```
+
+> Note the subtlety in the output.  The middle line in the output is a tuple while the first and last lines are lists.  How can we tell from the output the types?  Hint: Lists are indicated by square brackets while tuples are indicated by parentheses.
+
+The tuple is immutable while a list is mutable.  If we need to change a value in a tuple, we could convert the tuple to a list, change the list, and then convert back to a tuple. 
+
 ### The Python Dictionary
 There is one final issue with the movie data that is difficult to resolve with the list structure and that is what if the movie definition has a slightly different structure.  We will attempt to accommodate the possible variability of the structure using a _**dictionary**_.
 
