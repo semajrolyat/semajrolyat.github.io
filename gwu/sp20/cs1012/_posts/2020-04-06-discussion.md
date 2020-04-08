@@ -349,18 +349,44 @@ Much of the power offered by ```numpy``` comes from the ability to perform a mat
 ```python
 import numpy as np
 
-a = np.array([1,2,3])
-b = a + 1
+a = np.array([1.0,2.0,3.0])
+b = a + 1.0
 print("a=",a)
 print("b=",b)
 ```
 The above code produces the following output:
 ```
-a= [1 2 3]
-b= [2 3 4]
+a= [1. 2. 3.]
+b= [2. 3. 4.]
 ```
 
-While it may not be that useful to add a constant to each cell, this ability to perform a set of bulk mathematical operations can be very powerful.  Consider the following code:
+To take this a step further, we can perform any fundamental mathematical operation:
+```python
+import numpy as np
+
+a = np.array([2.0, 4.0, 8.0])
+b = a + 1.0
+c = a - 1.0
+d = a * 2.0
+e = a / 2.0
+
+print("a=",a)
+print("b=",b)
+print("c=",c)
+print("d=",d)
+print("e=",e)
+```
+
+The above produces the following output:
+```
+a= [2. 4. 8.]
+b= [3. 5. 9.]
+c= [1. 3. 7.]
+d= [ 4.  8. 16.]
+e= [1. 2. 4.]
+```
+
+While it may not be that useful to simply add a constant to each cell, this ability to perform a set of bulk mathematical operations can be very powerful.  It gives us the ability to scale and shift data in one step.  Consider the following code:
 ```python
 import numpy as np
 a = np.array([3,4])
@@ -377,4 +403,7 @@ The above code produces the following output:
 ```
 The above program computes the l2 norm of vector ```a``` and then normalizes that vector in a few clean operations.  If we needed to compute the l2 norm ourselves, we would need to sum the squares of each element in the vector and then take the square root of the sum.  Instead, we can use one operation on the entire vector.
 
-> What is the l2 norm?  Draw a right triangle with sides of the length provided in ```a```.  You will see that the value stored in ```l2``` is the length of the hypotenuse.  The final step of normalizing ```a``` by dividing it by ```l2``` gives the length of the sides of that triangle when projected onto the unit circle.
+> What is the l2 norm?  Draw a right triangle with sides of the length provided in ```a```.  You will see that the value stored in ```l2``` is the length of the hypotenuse.  The final step of normalizing ```a``` by dividing it by ```l2``` gives the length of the sides of that triangle when projected onto the unit circle.  For example, given a right triangle with sides of 3, 4, and 5, the normalized lengths of the triangle would be 0.6, 0.8, and 1.0 which is derived from 3/5 = 0.6, 4/5 = 0.8, and 5/5 = 1.0.
+
+## Conclusion
+This is a fundamental introduction to ```numpy```.  Much like we needed to learn and practice basic operations before we could write more sophisticated programs, we need to understand the fundamentals of ```numpy``` before performing data manipulation.  In the next discussion, we will will look at operations that we can perform on ```numpy``` arrays.
