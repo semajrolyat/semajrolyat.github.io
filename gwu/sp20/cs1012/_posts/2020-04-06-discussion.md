@@ -71,7 +71,7 @@ Building an ```ndarray``` directly can be fairly confusing, so ```numpy``` also 
 
 We can automatically create an ```ndarray``` entirely populated with zeros by using the ```zeros``` function.  For example, the following code generates an ```ndarray``` with one dimension and five elements where all values are initialized to zero:
 
-```Python
+```python
 import numpy as np
 a = np.zeros(5)
 print(a)
@@ -96,7 +96,7 @@ The above code produces the following output:
 ```
 
 The ```zeros``` function has the following function declaration:
-```Python
+```python
 numpy.zeros(shape, dtype=float, order='C')
 ```
 
@@ -108,7 +108,7 @@ numpy.zeros(shape, dtype=float, order='C')
 
 The ```arange``` function returns evenly spaced values within a given interval.  It is similar to the built in Python ```range``` function.  For example, the following code shows usage of ```arange``` in ways similar to how we have been using ```range```:
 
-```Python
+```python
 import numpy as np
 print(np.arange(3))
 print(np.arange(3.0))
@@ -153,7 +153,7 @@ numpy.arange([start, ]stop, [step, ]dtype=None)
 
 We may already have data in a ```list``` type that we would like to convert to an ```ndarray```.  The ```array``` function allows us to generate an ```ndarray``` from a sequence type, whether ```list``` or ```tuple```.  For example, the following code copies the ```list``` ```l``` into the ```ndarray``` ```a``` using the ```array``` function:
 
-```Python
+```python
 import numpy as np
 
 l = [1,2,3]
@@ -175,7 +175,7 @@ Produces the following output:
 
 The ```array``` function has the following declaration:
 
-```Python
+```python
 numpy.array(object, dtype=None, copy=True, order='K', subok=False, ndmin=0)
 ```
 
@@ -183,7 +183,7 @@ We really do not need to consider any parameters other than ```object``` as the 
 
 An ```array``` is not limited to one dimensional arrays.  If the ```object``` parameter contains nested sequence information, the ```ndarray``` generated will reflect the structure of the sequence object.  For example, the following code converts a list of lists into a two dimensional array:
 
-```Python
+```python
 import numpy as np
 
 l = [[1,2],[3,4]]
@@ -200,7 +200,7 @@ The above code produces the following output:
 
 The ```ndarray``` is a smart object that has a number of functions that are attached to it.  One of those functions allows us to ask any ```ndarray``` what its shape is.  This function is called ```shape``` and returns a ```tuple```.  For example, the following code creates an array and queries the ```ndarray``` for its ```shape```:
 
-```Python
+```python
 import numpy as np
 a = np.array([1,2,3,4])  # create a ndarray of 4 elements
 print(a)                 # print the contents of the ndarray
@@ -222,7 +222,7 @@ We see on the last line of output that ```shape``` reported that the array ```a`
 
 We may need to change the shape of an ```ndarray``` in order to work with the data in a particular way.  The following code shows how we can change a one dimensional ```ndarray``` into a two dimensional ```ndarray```:
 
-```Python
+```python
 import numpy as np
 
 a = np.array([1,2,3,4])  # create the ndarray a with 4 elements
@@ -245,7 +245,7 @@ The above code produces the following output:
 The first line is the original array ```a``` which is 'flat' or has only one dimension which is reflected by the output on the second line produced by asking for the shape of ```a```, _i.e._ ```4```.  The third and fourth lines are the new array ```b``` which is a copy of ```a``` with a different shape, _i.e._ ```(2,2)``` meaning two rows and two columns.  On the fifth line, the shape of ```b```, _i.e._ 2x2, is printed.
 
 Conversely, we can 'flatten' or reshape a multi-dimensional ```ndarray``` into a one dimensional ```ndarray```:
-```Python
+```python
 import numpy as np
 
 a = np.array([[1,2],[3,4]])  # create a 2x2 ndarray
@@ -260,7 +260,7 @@ The above code produces the following output:
 ```
 
 Keep in mind that an ```ndarray``` is n-dimensional.  It is often convenient for us to think of arrays in at most two dimensions; however, the number of dimensions for the ```ndarray``` can be arbitrary.  For example, the following code creates a three dimensional array:
-```Python
+```python
 import numpy as np
 
 a = np.arange(27)
@@ -287,12 +287,12 @@ In this example, it may become difficult to visualize the structure of the array
 We index an ```ndarray``` using a similar approach to how we indexed Python sequence types; however, the usage is slightly different while being more capable.
 
 There is no difference between indexing a ```list``` with no nesting and a one dimensional ```ndarray```; however, there is a significant difference between indexing a nested ```list``` and a multidimensional ```ndarray```.  Recall that when we accessed nested ```list```s, _i.e._ a lists of lists, we used a pair of square brackets for each level of nesting.  The ```ndarray``` is indexed using a si2ngle pair of square brackets regardless of the number of dimensions in the ```ndarray``` with the index into each dimension separated by commas.  For example, a list of lists is indexed using the following approach:
-```Python
+```python
 l = [[1,2],[3,4]]
 print( l[0][0] )
 ```
 Note that two pairs of square brackets are required to access the first element in the nested ```list```.  Contrast the following code with the previous code:
-```Python
+```python
 import numpy as np
 a = np.array([[1,2],[3,4]])
 print(a[0,0])
@@ -326,7 +326,7 @@ In the output above, the first line represents the slice of row 1 (the second ro
 
 Using these slicing techniques, we can easily extract one or more rows or columns as needed from any ```ndarray```.  We are actually slicing smaller arrays from the larger ```ndarray```, and we can slice an arbitrary array from the original array.  For example:
 
-```Python
+```python
 import numpy as np
 
 a = np.array([[1,2,3],[4,5,6],[7,8,9]])  # create a 3x3 ndarray
@@ -346,7 +346,7 @@ While we have focused on iteration as a fundamental of programming, Python's mos
 ### Using Mathematical Operators
 
 Much of the power offered by ```numpy``` comes from the ability to perform a mathematical operation on all cells in an ```ndarray``` using a single statement.  The following code illustrates we can add a constant to all cells in the ```ndarray```:
-```Python
+```python
 import numpy as np
 
 a = np.array([1,2,3])
@@ -361,7 +361,7 @@ b= [2 3 4]
 ```
 
 While it may not be that useful to add a constant to each cell, this ability to perform a set of bulk mathematical operations can be very powerful.  Consider the following code:
-```Python
+```python
 import numpy as np
 a = np.array([3,4])
 l2 = np.linalg.norm(a)
