@@ -196,6 +196,42 @@ The above code produces the following output:
  [3 4]]
 ```
 
+### [```numpy.random.randint```](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.randint.html)
+
+In an earlier discussion, we discussed how random numbers can be very useful and we looked at generation of random data using the ```random``` module.  ```numpy``` also has the ability to generate arrays containing random data.  The ```numpy.random.randint``` function will generate a ```numpy``` array containing randomly generated integer data.
+
+The ```randint``` function has the following declaration:
+```python
+numpy.random.randint(low, high=None, size=None, dtype='l')
+```
+The ```numpy.random.randint``` function returns an array of size as specified by the ```size``` parameter.  If ```size``` is ```None```, then ```randint``` returns an array of size 1.  ```low``` specifies the smallest number to generate and ```high``` specifies the largest number to generate; therefore if both are provided, ```randint``` generates numbers in the range ```[low,high]```.  If ```high``` is ```None``` then ```randint``` generates numbers in the range ```[0,low)```.  
+
+For example, the following code specifies to generate an array of five numbers in the range [0,10)
+```python
+import numpy as np
+
+a = np.random.randint(10, size=5)
+print(a)
+```
+The above produced the following output on the first run:
+```
+[1 4 6 5 3]
+```
+
+The same program can be reexpressed using both ```low``` and ```high``` as:
+```python
+import numpy as np
+
+a = np.random.randint(0,10-1,size=5)
+print(a)
+```
+> Note that when specifying both ```low``` and ```high``` the range is inclusive but when only specifying ```low``` the upper end of the range is exclusive, so this second program has expressed that change in inclusivity and exclusivity by subtracting 1.  
+
+The above produced the following output on the first run:
+```
+[7 0 7 6 7]
+```
+
 #### [```numpy.ndarray.shape```](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.ndarray.shape.html)
 
 The ```ndarray``` is a smart object that has a number of functions that are attached to it.  One of those functions allows us to ask any ```ndarray``` what its shape is.  This function is called ```shape``` and returns a ```tuple```.  For example, the following code creates an array and queries the ```ndarray``` for its ```shape```:
