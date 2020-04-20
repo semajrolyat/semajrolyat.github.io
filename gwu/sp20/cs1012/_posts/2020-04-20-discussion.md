@@ -239,7 +239,11 @@ plt.plot(x,y,marker='o',linewidth=0)
 ![Scatter Plot]({{"/gwu/fa18/cs1012/assets/11_20_2018/scatter02.png" | absolute_url }})
 
 ### Histogram Example
-Another useful plotting function in ```pyplot``` is the histogram using the ```hist``` function.  The following code uses the normal distribution function from ```numpy.random``` to produce a normal distribution and then plots a histogram of the distribution using the ```hist``` function:
+As opposed to the more general linear or scatter plots, some plots are specialized statistical tools.  One example is the histogram, in ```pyplot``` the ```hist``` function, which represents a count of the number of samples that fall into a particular bin.  The histogram shows how tightly clustered/related data is given the right granularity.
+
+A chart designer can choose between having a few bins where many items are counted in a single bin or having many bins where very few items are counted together.  Choosing the appropriate number of bins can significantly change the perspective on the data: too few and all samples are tightly clustered into a few bins; too many and very few samples are clustered together.
+
+The following code uses the normal distribution function from ```numpy.random``` to produce a normal distribution and then plots a histogram of the distribution using the ```hist``` function:
 
 ```python
 import matplotlib.pyplot as plt
@@ -251,9 +255,60 @@ s = np.random.normal(mu, sigma, 1000)
 plt.hist(s)
 ```
 
+If the number of bins is omitted as above the default number of bins of 10 is chosen.
+
 ![Histogram]({{"/gwu/fa18/cs1012/assets/11_20_2018/histogram.png" | absolute_url }})
 
-There are large number of statistical, probability, and signal processing functions in the ```scipy``` library.  You may need to explicitly install ```scipy``` through Anaconda to gain access to these features.
+To control the number of bins, pass the ```bin``` parameter when calling the ```hist``` function.  For example, this program increases the number of bins from the default of ```10``` to ```50```:
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+mu, sigma = 0, 0.1
+s = np.random.normal(mu, sigma, 1000)
+
+plt.hist(s, bins=50)
+```
+
+### Pie Chart Example
+Another statistical tool is the pie chart which shows apportionment of subsets of data within the larger set.  With a pie chart, we can see how much weight a particular subset has.
+
+For example, the following pie chart illustrates preferences of primary pizza topping among the US population in the early 2010's:
+
+```python
+import matplotlib.pyplot as plt
+
+labels = 'Pepperoni', 'Sausage', 'Beef', 'Chicken', 'Cheese', 'Vegetables', 'Other'
+sizes = [36, 14, 4, 7, 8, 19, 12]
+
+plt.pie(sizes)
+
+plt.show()
+```
+
+The above code produces the following plot:
+
+![Basic Pie]({{"/gwu/fa18/cs1012/assets/11_20_2018/basicpie.png" | absolute_url }})
+
+While the above generates a plot, it is not entirely useful as it is not labeled and it's not clear how the renderer generated the slices.  We can control the pie plot by using a number of parameters.  For example, the following code generates a plot from the same data, but the plot is now labeled and the initial positioning of the first slice is specified:
+
+```python
+import matplotlib.pyplot as plt
+
+labels = 'Pepperoni', 'Sausage', 'Beef', 'Chicken', 'Cheese', 'Vegetables', 'Other'
+sizes = [36, 14, 4, 7, 8, 19, 12]
+
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+
+plt.show()
+```
+
+The above code produces the following plot:
+
+![Labeled Pie]({{"/gwu/fa18/cs1012/assets/11_20_2018/labeledpie.png" | absolute_url }})
+
+There are many optional parameters for the ```pie``` function.  Most of the details are beyond this introduction; however, you should look at the ```pie``` function [reference documentation](https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.pie.html) for additional features and examples.
 
 ### Generating data from math functions
 We may wish to compare data from an experimental set with an analytical solution.  The following example demonstrates how to plot the ```sin``` function by sampling ```sin``` using evenly spaced inputs:
@@ -284,6 +339,8 @@ plt.plot(x,c)
 ```
 
 ![Math Functions]({{"/gwu/fa18/cs1012/assets/11_20_2018/math02.png" | absolute_url }})
+
+> There are large number of statistical, probability, and signal processing functions in the ```scipy``` library.  You may need to explicitly install ```scipy``` through Anaconda to gain access to these features.
 
 ### Adding a legend
 You may wish to generate a legend for your plot.  You may do this by passing a ```label``` argument when plotting a line and then calling the ```legend``` function to generate the legend.
