@@ -27,7 +27,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+Assistant Professor of Practice
+
 Office: Science and Engineering Hall (SEH) 4665
+
+Computer Science Professor of the Year 2021, 2022, 2024 
 
 <!--Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
