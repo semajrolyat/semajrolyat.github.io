@@ -31,7 +31,11 @@ Assistant Professor of Practice
 
 Office: Science and Engineering Hall (SEH) 4665
 
-Computer Science Professor of the Year 2021, 2022, 2024 
+Computer Science Department Professor of the Year 2021-2022, 2022-2023, 2024-2025 
+
+<!-- Started programming in 1979 and self-taught mostly using magazines or left over . -->
+
+<!-- Worked my way from temp hardware guy to enterprise programmer for an estimation software company in the 1990's.  Finished my BS in CS in 2010 at University of Memphis.  PhD from GWU in 2018,  -->
 
 <!--Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

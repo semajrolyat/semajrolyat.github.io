@@ -36,11 +36,11 @@ We have Java and other sophisticated languages, so why would it be necessary for
 
 Consider the role of draftsman. 
 
-![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc17TfpX662-G1w3GaSGwMg_gkQeklahHaybANewEQ3VgW2b12MyInB21KSesD4ok-cZANpK7SXTMYUBcGrIzCUFbHoJl3sk1KGP_9evUZEOApDLZQd8onpBmY2hQaDoRhNLHbeiA?key=i5itq6yAfuVyy8xtjKdHn0Pd)
+![Image of a draftsman](draftsman.png)
 
 Drafting required extensive training and skills; however, it is a narrow skill set that was completely displaced by CAD systems and image design tools like Photoshop. During WW2, tens of thousands of draftsmen supported the war effort designing all the components necessary to produce war materials, and the draftsman role was a prized and respected engineering job and a necessary engineering skill through the 1980’s.
 
-![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeeElgzWhYBRxhot64vVwDse5bYwUtG00NYk4--UYO8u_gewA6w8Aohf40hn24uuPu5LG8m810ZOH9qyZ2eZbrA5WBEzoSa2EaUm6MqRVr2UuAfy2i4Yosrw6n8Jsl3RL0kR8P0bA?key=i5itq6yAfuVyy8xtjKdHn0Pd)
+![Image of a drafting shop](draftingshop.png)
 
 With the development of drafting and art design software in the 1980's, the drafting profession was effectively eliminated from the labor market as a job in itself and the skill-set is now only one among many skills needed for specific professions like architects and CNC operators.  The lesson here is that engineers must be wary of developing too narrow a skill-set because an extremely narrow specialty can be entirely eliminated from the labor market due to technological advancement.  While programming is a specialty, programmers need to be flexible enough to adapt to new technologies and languages as changes affect the programming labor market especially in the burgeoning age of AI.  Consider that you are making a substantial investment for this education with the expectation that your college fees are amortized over a 40+ year career.  This course will focus on developing language independent skills that will help the modern programmer survive specialized changes to the labor market in order to make a programmer more adaptable in the face of technical pressure to subsume the programming job.  
 

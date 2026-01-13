@@ -1,8 +1,8 @@
 ---
 layout: page
-permalink: /teaching/
-title: teaching
-description: A record of my teaching responsibilities
+permalink: /courses/
+title: course
+description: A record of my course teaching responsibilities
 nav: true
 nav_order: 1
 ---
